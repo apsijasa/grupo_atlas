@@ -45,6 +45,185 @@
     background-color: var(--accent-color);
   }
   
+  /* Estilos neón para elementos tecnológicos */
+
+/* Mejoras visuales para la sección de tecnologías */
+.tech-category {
+  background: linear-gradient(to bottom right, rgba(22, 21, 29, 0.9), rgba(12, 11, 19, 0.95));
+  border: 1px solid rgba(142, 68, 173, 0.3);
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  transition: all 0.4s ease;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.tech-category::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #8e44ad, #1abc9c);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.6s ease;
+}
+
+.tech-category:hover::before {
+  transform: scaleX(1);
+}
+
+.tech-category h3 {
+  color: #ecf0f1;
+  text-shadow: 0 0 5px #8e44ad;
+  font-size: 1.3rem;
+  letter-spacing: 1px;
+  position: relative;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.tech-category h3::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 2px;
+  background-color: #1abc9c;
+  box-shadow: 0 0 8px #1abc9c;
+}
+
+/* Estilo neón para elementos de tecnología */
+.tech-item {
+  background-color: rgba(26, 188, 156, 0.1);
+  color: #ecf0f1;
+  border: 1px solid rgba(26, 188, 156, 0.2);
+  box-shadow: 0 0 8px rgba(26, 188, 156, 0.1);
+  padding: 10px 16px;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+  cursor: default;
+  text-shadow: 0 0 2px rgba(255, 255, 255, 0.5);
+  position: relative;
+  overflow: hidden;
+}
+
+.tech-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  transform: translateX(-100%);
+  transition: transform 0.6s ease;
+}
+
+.tech-item:hover {
+  background-color: rgba(26, 188, 156, 0.2);
+  box-shadow: 0 0 12px rgba(26, 188, 156, 0.3);
+  transform: translateY(-3px);
+}
+
+.tech-item:hover::before {
+  transform: translateX(100%);
+}
+
+/* Estilos específicos para diferentes categorías de tecnología */
+.tech-category:nth-child(1) .tech-item {
+  border-color: rgba(142, 68, 173, 0.3);
+  box-shadow: 0 0 8px rgba(142, 68, 173, 0.2);
+}
+
+.tech-category:nth-child(1) .tech-item:hover {
+  background-color: rgba(142, 68, 173, 0.2);
+  box-shadow: 0 0 12px rgba(142, 68, 173, 0.4);
+}
+
+.tech-category:nth-child(2) .tech-item {
+  border-color: rgba(52, 152, 219, 0.3);
+  box-shadow: 0 0 8px rgba(52, 152, 219, 0.2);
+}
+
+.tech-category:nth-child(2) .tech-item:hover {
+  background-color: rgba(52, 152, 219, 0.2);
+  box-shadow: 0 0 12px rgba(52, 152, 219, 0.4);
+}
+
+.tech-category:nth-child(3) .tech-item {
+  border-color: rgba(46, 204, 113, 0.3);
+  box-shadow: 0 0 8px rgba(46, 204, 113, 0.2);
+}
+
+.tech-category:nth-child(3) .tech-item:hover {
+  background-color: rgba(46, 204, 113, 0.2);
+  box-shadow: 0 0 12px rgba(46, 204, 113, 0.4);
+}
+
+.tech-category:nth-child(4) .tech-item {
+  border-color: rgba(243, 156, 18, 0.3);
+  box-shadow: 0 0 8px rgba(243, 156, 18, 0.2);
+}
+
+.tech-category:nth-child(4) .tech-item:hover {
+  background-color: rgba(243, 156, 18, 0.2);
+  box-shadow: 0 0 12px rgba(243, 156, 18, 0.4);
+}
+
+/* Animación de pulsación para seleccionar elementos aleatorios */
+@keyframes neonPulse {
+  0% {
+      transform: scale(1);
+      box-shadow: 0 0 8px currentColor;
+  }
+  50% {
+      transform: scale(1.05);
+      box-shadow: 0 0 15px currentColor;
+  }
+  100% {
+      transform: scale(1);
+      box-shadow: 0 0 8px currentColor;
+  }
+}
+
+.pulse-neon {
+  animation: neonPulse 2s infinite;
+}
+
+/* Ajuste de la sección de tecnologías */
+.technologies {
+  background-color: rgba(22, 21, 29, 0.05);
+  position: relative;
+  overflow: hidden;
+}
+
+.technologies::before {
+  content: '{ }';
+  position: absolute;
+  opacity: 0.03;
+  font-size: 15rem;
+  font-family: 'Courier New', monospace;
+  bottom: 5%;
+  right: 5%;
+  color: #8e44ad;
+}
+
+/* Media queries */
+@media (max-width: 768px) {
+  .tech-category {
+      margin-bottom: 30px;
+  }
+  
+  .technologies::before {
+      font-size: 10rem;
+  }
+}
+
   /* Encabezados de sección */
   body.web-services-theme .section-header h2 {
     color: var(--primary-color);
