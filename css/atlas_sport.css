@@ -1,0 +1,180 @@
+/* Modificación de variables CSS para Atlas Sport */
+/* Estos estilos se pueden incluir en un <style> dentro de data_sport.html
+   o en un archivo CSS separado para Atlas Sport */
+
+/* Paleta de colores personalizada */
+:root {
+    --primary-color: #005ea8;    /* Azul deportivo - más profundo */
+    --secondary-color: #00a0d2;  /* Cian azulado - color de agua/tecnología */
+    --accent-color: #2ecc71;     /* Verde deportivo - energía y rendimiento */
+    --dark-color: #0c2d4a;       /* Azul oscuro - profesionalismo */
+    --light-color: #e8f4fc;      /* Azul muy claro - para fondos */
+    --energy-color: #3498db;     /* Azul energético - dinamismo */
+    --water-color: #1abc9c;      /* Turquesa - relacionado con natación */
+    --gray-color: #6c757d;       /* Se mantiene el gris original */
+    --text-color: #212529;       /* Se mantiene el color de texto original */
+    --success-color: #28a745;    /* Se mantiene el color de éxito original */
+    --border-color: #dee2e6;     /* Se mantiene el color de borde original */
+    --box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+  }
+  
+  /* Ajustes específicos para Atlas Sport */
+  body.sport-theme {
+    background-color: var(--light-color);
+  }
+  
+  body.sport-theme .hero {
+    background: linear-gradient(rgba(0, 94, 168, 0.8), rgba(0, 160, 210, 0.8)), 
+                url('asset/image/imagen_jumbotron.jpg') no-repeat center center/cover;
+  }
+  
+  /* Logos y colores de navegación */
+  body.sport-theme .logo h1,
+  body.sport-theme .nav-menu a:hover,
+  body.sport-theme .nav-menu a.active {
+    color: var(--primary-color);
+  }
+  
+  body.sport-theme .nav-menu a::after,
+  body.sport-theme .nav-menu a.active::after {
+    background-color: var(--accent-color);
+  }
+  
+  /* Sección de Servicios */
+  body.sport-theme .company-card:hover .company-icon,
+  body.sport-theme .service-card:hover .service-icon {
+    background-color: var(--primary-color);
+  }
+  
+  /* Personalización de iconos por deporte */
+  body.sport-theme .service-card:nth-child(1) .service-icon {
+    color: var(--water-color); /* SwimX Training - Natación */
+  }
+  
+  body.sport-theme .service-card:nth-child(2) .service-icon {
+    color: var(--energy-color); /* Fútbol Analytics */
+  }
+  
+  body.sport-theme .service-card:nth-child(3) .service-icon {
+    color: var(--accent-color); /* Atletismo Data */
+  }
+  
+  body.sport-theme .service-card:nth-child(4) .service-icon {
+    color: var(--primary-color); /* Hockey Analytics */
+  }
+  
+  body.sport-theme .service-card:nth-child(5) .service-icon {
+    color: var(--secondary-color); /* Volleyball Stats */
+  }
+  
+  /* Sección de Tecnología */
+  body.sport-theme .tech-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  body.sport-theme .tech-item {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: var(--box-shadow);
+    padding: 30px;
+    text-align: center;
+    transition: var(--transition);
+  }
+  
+  body.sport-theme .tech-item:hover {
+    transform: translateY(-10px);
+  }
+  
+  body.sport-theme .tech-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 20px;
+    background-color: var(--light-color);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--secondary-color);
+    font-size: 2rem;
+    transition: var(--transition);
+  }
+  
+  body.sport-theme .tech-item:hover .tech-icon {
+    background-color: var(--secondary-color);
+    color: white;
+  }
+  
+  /* Casos de estudio */
+  body.sport-theme .case-study {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
+    margin-bottom: 30px;
+  }
+  
+  body.sport-theme .case-study-content {
+    padding: 30px;
+  }
+  
+  body.sport-theme .testimonial {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: var(--light-color);
+    border-left: 4px solid var(--primary-color);
+    font-style: italic;
+  }
+  
+  /* CTA con gradiente moderno */
+  body.sport-theme .cta {
+    background: linear-gradient(rgba(0, 94, 168, 0.85), rgba(0, 160, 210, 0.85)), 
+                url('/api/placeholder/1200/400') no-repeat center center/cover;
+  }
+  
+  /* Botones */
+  body.sport-theme .btn-primary {
+    background-color: var(--primary-color);
+  }
+  
+  body.sport-theme .btn-primary:hover {
+    background-color: var(--accent-color);
+  }
+  
+  body.sport-theme .btn-secondary {
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+  }
+  
+  body.sport-theme .btn-secondary:hover {
+    background-color: var(--primary-color);
+  }
+  
+  /* Encabezados de sección */
+  body.sport-theme .section-header h2 {
+    color: var(--primary-color);
+  }
+  
+  body.sport-theme .section-header h2::after {
+    background-color: var(--accent-color);
+  }
+  
+  /* Footer */
+  body.sport-theme footer .footer-links h3::after,
+  body.sport-theme footer .footer-companies h3::after,
+  body.sport-theme footer .footer-newsletter h3::after {
+    background-color: var(--accent-color);
+  }
+  
+  body.sport-theme footer .footer-newsletter button {
+    background-color: var(--primary-color);
+  }
+  
+  body.sport-theme footer .footer-newsletter button:hover {
+    background-color: var(--accent-color);
+  }

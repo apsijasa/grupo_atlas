@@ -7,7 +7,7 @@
     <title>Grupo Atlas - Soluciones Integrales</title>
     <link rel="icon" href="asset/image/favicon-16x16.png" type="image/x-icon">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -29,6 +29,16 @@
             </div>
             <ul class="nav-menu">
                 <li><a href="#home" class="active">Inicio</a></li>
+                <li class="dropdown">
+                    <a href="#empresas" class="dropdown-toggle">Servicios <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="#">RenovaCare</a>
+                        <a href="atlas_sport.html">Atlas Sport</a>
+                        <a href="constructora.html">Constructora Atlas</a>
+                        <a href="consulting.html">Atlas Consulting</a>
+                        <a href="web_services.html">Servicios Web</a>
+                    </div>
+                </li>
                 <li><a href="#empresas">Nuestras Empresas</a></li>
                 <li><a href="#portfolio">Portafolio</a></li>
                 <li><a href="#about">Nosotros</a></li>
@@ -36,7 +46,7 @@
             </ul>
         </nav>
     </header>
-
+    
     <section id="home" class="hero">
         <div class="hero-content">
             <h1>Innovación y excelencia en múltiples industrias</h1>
@@ -66,10 +76,10 @@
                 <div class="company-icon">
                     <i class="fas fa-chart-line"></i>
                 </div>
-                <h3>Data Sport</h3>
+                <h3>Atlas Sport</h3>
                 <p>Plataforma de recolección de datos deportivos para la mejora en el rendimiento deportivo y mejora en
                     las políticas públicas para deportes.</p>
-                <a href="data_sport.html" class="btn-secondary">Conocer más</a>
+                <a href="atlas_sport.html" class="btn-secondary">Conocer más</a>
             </div>
 
             <div class="company-card">
@@ -171,7 +181,7 @@
 
         <div class="about-content">
             <div class="about-image">
-                <img src="/api/placeholder/600/400" alt="Grupo Atlas Team">
+                <img src="asset/image/multiples vias.png    " alt="Grupo Atlas Team">
             </div>
             <div class="about-text">
                 <h3>Impulsando el cambio desde múltiples frentes</h3>
@@ -211,12 +221,12 @@
                 <div class="info-item">
                     <i class="fas fa-map-marker-alt"></i>
                     <h4>Ubicación</h4>
-                    <p>Av. Principal 1234, Ciudad</p>
+                    <p>Av. J.M. Escriba de Balaguer 14150, of 414, Lo Barnechea</p>
                 </div>
                 <div class="info-item">
                     <i class="fas fa-envelope"></i>
                     <h4>Email</h4>
-                    <p>contacto@grupoatlas.com</p>
+                    <p>info@atlasgroup.cl</p>
                 </div>
                 <div class="info-item">
                     <i class="fas fa-phone"></i>
@@ -295,32 +305,27 @@
         document.querySelector('.menu-toggle').addEventListener('click', function () {
             document.querySelector('.nav-menu').classList.toggle('active');
         });
-
+    
         // Navegación smooth scroll
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
+                const href = this.getAttribute('href');
+                if (href.startsWith('#') && document.querySelector(href)) {
+                    e.preventDefault();
+                    document.querySelector(href).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
             });
         });
-
-        // Filtro de portafolio
-        document.querySelectorAll('.filter-btn').forEach(btn => {
-            btn.addEventListener('click', () => {
-                document.querySelector('.filter-btn.active').classList.remove('active');
-                btn.classList.add('active');
-
-                const filter = btn.getAttribute('data-filter');
-
-                document.querySelectorAll('.portfolio-item').forEach(item => {
-                    if (filter === 'all' || item.classList.contains(filter)) {
-                        item.style.display = 'block';
-                    } else {
-                        item.style.display = 'none';
-                    }
-                });
+    
+        // Manejo del menú desplegable en móvil
+        document.querySelectorAll('.dropdown-toggle').forEach(toggle => {
+            toggle.addEventListener('click', function(e) {
+                if (window.innerWidth <= 768) {
+                    e.preventDefault();
+                    this.parentElement.classList.toggle('active');
+                }
             });
         });
     </script>

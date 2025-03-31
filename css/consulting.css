@@ -1,0 +1,210 @@
+/* Paleta de colores personalizada para Atlas Consulting */
+:root {
+    --primary-color: #3498db;      /* Azul consultoría - confianza e inteligencia */
+    --secondary-color: #2980b9;    /* Azul oscuro - profesionalismo */
+    --accent-color: #9b59b6;       /* Púrpura - creatividad y estrategia */
+    --dark-color: #2c3e50;         /* Azul muy oscuro - seriedad */
+    --light-color: #ecf0f1;        /* Gris claro - para fondos */
+    --insight-color: #16a085;      /* Verde azulado - datos e insights */
+    --innovation-color: #e74c3c;   /* Rojo - innovación y disrupción */
+    --text-color: #2c3e50;         /* Color de texto principal */
+    --gray-color: #7f8c8d;         /* Gris para textos secundarios */
+    --border-color: #dee2e6;       /* Color para bordes */
+    --box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+  }
+  
+  /* Fondos y secciones */
+  body.consulting-theme {
+    background-color: var(--light-color);
+  }
+  
+  body.consulting-theme .hero {
+    background: linear-gradient(rgba(52, 152, 219, 0.8), rgba(41, 128, 185, 0.8)), 
+                url('asset/image/imagen_jumbotron.jpg') no-repeat center center/cover;
+  }
+  
+  /* Logos y navegación */
+  body.consulting-theme .logo-svg path:first-child {
+    fill: var(--dark-color);
+  }
+  
+  body.consulting-theme .logo-svg path:last-child {
+    fill: var(--primary-color);
+  }
+  
+  body.consulting-theme .logo h1,
+  body.consulting-theme .nav-menu a:hover,
+  body.consulting-theme .nav-menu a.active {
+    color: var(--primary-color);
+  }
+  
+  body.consulting-theme .nav-menu a::after,
+  body.consulting-theme .nav-menu a.active::after {
+    background-color: var(--accent-color);
+  }
+  
+  /* Encabezados de sección */
+  body.consulting-theme .section-header h2 {
+    color: var(--primary-color);
+  }
+  
+  body.consulting-theme .section-header h2::after {
+    background-color: var(--accent-color);
+  }
+  
+  /* Botones */
+  body.consulting-theme .btn-primary {
+    background-color: var(--primary-color);
+  }
+  
+  body.consulting-theme .btn-primary:hover {
+    background-color: var(--accent-color);
+  }
+  
+  body.consulting-theme .btn-secondary {
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+  }
+  
+  body.consulting-theme .btn-secondary:hover {
+    background-color: var(--primary-color);
+  }
+  
+  /* Tarjetas de servicios */
+  body.consulting-theme .service-icon {
+    color: var(--primary-color);
+    background-color: var(--light-color);
+  }
+  
+  body.consulting-theme .service-card:hover .service-icon {
+    background-color: var(--primary-color);
+    color: white;
+  }
+  
+  /* Iconos específicos por área de especialización */
+  body.consulting-theme .service-card:nth-child(1) .service-icon {
+    color: var(--primary-color); /* Consultoría Deportiva */
+  }
+  
+  body.consulting-theme .service-card:nth-child(2) .service-icon {
+    color: var(--innovation-color); /* Estrategia en eSports */
+  }
+  
+  body.consulting-theme .service-card:nth-child(3) .service-icon {
+    color: var(--insight-color); /* Proyectos Energéticos */
+  }
+  
+  body.consulting-theme .service-card:nth-child(4) .service-icon {
+    color: var(--accent-color); /* Estrategia Empresarial */
+  }
+  
+  body.consulting-theme .service-card:nth-child(5) .service-icon {
+    color: var(--gray-color); /* Gestión de Cambio */
+  }
+  
+  /* Metodología */
+  body.consulting-theme .methodology-step {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: var(--box-shadow);
+    position: relative;
+    padding: 30px;
+    transition: var(--transition);
+  }
+  
+  body.consulting-theme .methodology-step:hover {
+    transform: translateY(-10px);
+  }
+  
+  body.consulting-theme .step-number {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    opacity: 0.2;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+  }
+  
+  body.consulting-theme .step-content h3 {
+    color: var(--primary-color);
+  }
+  
+  /* Casos de estudio */
+  body.consulting-theme .case-study {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
+    margin-bottom: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+  }
+  
+  body.consulting-theme .case-content h3 {
+    color: var(--primary-color);
+  }
+  
+  body.consulting-theme .case-results .result span {
+    color: var(--primary-color);
+    font-weight: 600;
+  }
+  
+  /* Equipo */
+  body.consulting-theme .team-member {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
+    transition: var(--transition);
+  }
+  
+  body.consulting-theme .team-member:hover {
+    transform: translateY(-10px);
+  }
+  
+  body.consulting-theme .member-position {
+    color: var(--accent-color);
+  }
+  
+  /* CTA */
+  body.consulting-theme .cta {
+    background: linear-gradient(rgba(52, 152, 219, 0.85), rgba(41, 128, 185, 0.85)), 
+                url('/api/placeholder/1200/400') no-repeat center center/cover;
+  }
+  
+  /* Footer */
+  body.consulting-theme footer .footer-links h3::after,
+  body.consulting-theme footer .footer-companies h3::after,
+  body.consulting-theme footer .footer-newsletter h3::after {
+    background-color: var(--accent-color);
+  }
+  
+  body.consulting-theme footer .footer-newsletter button {
+    background-color: var(--primary-color);
+  }
+  
+  body.consulting-theme footer .footer-newsletter button:hover {
+    background-color: var(--accent-color);
+  }
+  
+  /* Secciones con fondos alternados */
+  body.consulting-theme .company-details, 
+  body.consulting-theme .methodology,
+  body.consulting-theme .team {
+    background-color: white;
+  }
+  
+  body.consulting-theme .services, 
+  body.consulting-theme .case-studies {
+    background-color: var(--light-color);
+  }
+  
+  /* Media queries */
+  @media (max-width: 768px) {
+    body.consulting-theme .case-study {
+      grid-template-columns: 1fr;
+    }
+  }

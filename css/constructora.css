@@ -1,0 +1,186 @@
+/* Paleta de colores personalizada para Constructora Atlas */
+:root {
+    --primary-color: #e67e22;      /* Naranja construcción - energía y acción */
+    --secondary-color: #d35400;    /* Naranja oscuro - solidez y confianza */
+    --accent-color: #f1c40f;       /* Amarillo - seguridad y precaución */
+    --dark-color: #34495e;         /* Azul oscuro - profesionalismo */
+    --light-color: #f9f6f2;        /* Crema claro - para fondos */
+    --steel-color: #7f8c8d;        /* Gris acero - materiales de construcción */
+    --concrete-color: #95a5a6;     /* Gris concreto - infraestructura */
+    --text-color: #2c3e50;         /* Color de texto principal */
+    --gray-color: #6c757d;         /* Gris para textos secundarios */
+    --border-color: #dee2e6;       /* Color para bordes */
+    --box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+  }
+  
+  /* Fondos y secciones */
+  body.constructora-theme {
+    background-color: var(--light-color);
+  }
+  
+  body.constructora-theme .hero {
+    background: linear-gradient(rgba(227, 126, 34, 0.8), rgba(211, 84, 0, 0.8)), 
+                url('asset/image/imagen_jumbotron.jpg') no-repeat center center/cover;
+  }
+  
+  /* Logos y navegación */
+  body.constructora-theme .logo-svg path:first-child {
+    fill: var(--dark-color);
+  }
+  
+  body.constructora-theme .logo-svg path:last-child {
+    fill: var(--primary-color);
+  }
+  
+  body.constructora-theme .logo h1,
+  body.constructora-theme .nav-menu a:hover,
+  body.constructora-theme .nav-menu a.active {
+    color: var(--primary-color);
+  }
+  
+  body.constructora-theme .nav-menu a::after,
+  body.constructora-theme .nav-menu a.active::after {
+    background-color: var(--primary-color);
+  }
+  
+  /* Encabezados de sección */
+  body.constructora-theme .section-header h2 {
+    color: var(--primary-color);
+  }
+  
+  body.constructora-theme .section-header h2::after {
+    background-color: var(--accent-color);
+  }
+  
+  /* Botones */
+  body.constructora-theme .btn-primary {
+    background-color: var(--primary-color);
+  }
+  
+  body.constructora-theme .btn-primary:hover {
+    background-color: var(--secondary-color);
+  }
+  
+  body.constructora-theme .btn-secondary {
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+  }
+  
+  body.constructora-theme .btn-secondary:hover {
+    background-color: var(--primary-color);
+  }
+  
+  /* Tarjetas de servicios */
+  body.constructora-theme .service-icon {
+    color: var(--primary-color);
+    background-color: var(--light-color);
+  }
+  
+  body.constructora-theme .service-card:hover .service-icon {
+    background-color: var(--primary-color);
+    color: white;
+  }
+  
+  /* Iconos específicos por servicio */
+  body.constructora-theme .service-card:nth-child(1) .service-icon {
+    color: var(--primary-color); /* Infraestructura Deportiva */
+  }
+  
+  body.constructora-theme .service-card:nth-child(2) .service-icon {
+    color: var(--accent-color); /* Proyectos Energéticos */
+  }
+  
+  body.constructora-theme .service-card:nth-child(3) .service-icon {
+    color: var(--steel-color); /* Edificación Comercial */
+  }
+  
+  body.constructora-theme .service-card:nth-child(4) .service-icon {
+    color: var(--concrete-color); /* Proyectos Residenciales */
+  }
+  
+  body.constructora-theme .service-card:nth-child(5) .service-icon {
+    color: var(--secondary-color); /* Mantenimiento y Recuperación */
+  }
+  
+  /* Pasos del proceso/enfoque */
+  body.constructora-theme .step {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: var(--box-shadow);
+    position: relative;
+    padding: 30px;
+    transition: var(--transition);
+  }
+  
+  body.constructora-theme .step:hover {
+    transform: translateY(-10px);
+  }
+  
+  body.constructora-theme .step-number {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    opacity: 0.2;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+  }
+  
+  body.constructora-theme .step-content h3 {
+    color: var(--primary-color);
+  }
+  
+  /* Proyectos destacados */
+  body.constructora-theme .project-card {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
+    transition: var(--transition);
+  }
+  
+  body.constructora-theme .project-card:hover {
+    transform: translateY(-10px);
+  }
+  
+  body.constructora-theme .project-info h3 {
+    color: var(--primary-color);
+  }
+  
+  body.constructora-theme .project-details .detail span {
+    color: var(--primary-color);
+    font-weight: 600;
+  }
+  
+  /* CTA */
+  body.constructora-theme .cta {
+    background: linear-gradient(rgba(227, 126, 34, 0.85), rgba(211, 84, 0, 0.85)), 
+                url('/api/placeholder/1200/400') no-repeat center center/cover;
+  }
+  
+  /* Footer */
+  body.constructora-theme footer .footer-links h3::after,
+  body.constructora-theme footer .footer-companies h3::after,
+  body.constructora-theme footer .footer-newsletter h3::after {
+    background-color: var(--primary-color);
+  }
+  
+  body.constructora-theme footer .footer-newsletter button {
+    background-color: var(--primary-color);
+  }
+  
+  body.constructora-theme footer .footer-newsletter button:hover {
+    background-color: var(--secondary-color);
+  }
+  
+  /* Secciones con fondos alternados */
+  body.constructora-theme .company-details, 
+  body.constructora-theme .projects {
+    background-color: white;
+  }
+  
+  body.constructora-theme .services, 
+  body.constructora-theme .project-approach {
+    background-color: var(--light-color);
+  }

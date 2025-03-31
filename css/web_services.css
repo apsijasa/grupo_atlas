@@ -1,0 +1,244 @@
+/* Paleta de colores personalizada para Atlas Servicios Web */
+:root {
+    --primary-color: #8e44ad;      /* Púrpura - innovación digital */
+    --secondary-color: #9b59b6;    /* Púrpura claro - tecnología */
+    --accent-color: #1abc9c;       /* Turquesa - moderno y fresco */
+    --dark-color: #2c3e50;         /* Azul oscuro - profesionalismo */
+    --light-color: #f5f6fa;        /* Gris muy claro - fondo digital */
+    --code-color: #e74c3c;         /* Rojo - programación/código */
+    --data-color: #3498db;         /* Azul - datos/análisis */
+    --ai-color: #f39c12;           /* Naranja - inteligencia artificial */
+    --text-color: #34495e;         /* Color de texto principal */
+    --gray-color: #7f8c8d;         /* Gris para textos secundarios */
+    --border-color: #dcdde1;       /* Color para bordes */
+    --box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+  }
+  
+  /* Fondos y secciones */
+  body.web-services-theme {
+    background-color: var(--light-color);
+  }
+  
+  body.web-services-theme .hero {
+    background: linear-gradient(rgba(142, 68, 173, 0.8), rgba(155, 89, 182, 0.8)), 
+                url('asset/image/imagen_jumbotron.jpg') no-repeat center center/cover;
+  }
+  
+  /* Logos y navegación */
+  body.web-services-theme .logo-svg path:first-child {
+    fill: var(--dark-color);
+  }
+  
+  body.web-services-theme .logo-svg path:last-child {
+    fill: var(--primary-color);
+  }
+  
+  body.web-services-theme .logo h1,
+  body.web-services-theme .nav-menu a:hover,
+  body.web-services-theme .nav-menu a.active {
+    color: var(--primary-color);
+  }
+  
+  body.web-services-theme .nav-menu a::after,
+  body.web-services-theme .nav-menu a.active::after {
+    background-color: var(--accent-color);
+  }
+  
+  /* Encabezados de sección */
+  body.web-services-theme .section-header h2 {
+    color: var(--primary-color);
+  }
+  
+  body.web-services-theme .section-header h2::after {
+    background-color: var(--accent-color);
+  }
+  
+  /* Botones */
+  body.web-services-theme .btn-primary {
+    background-color: var(--primary-color);
+  }
+  
+  body.web-services-theme .btn-primary:hover {
+    background-color: var(--accent-color);
+  }
+  
+  body.web-services-theme .btn-secondary {
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+  }
+  
+  body.web-services-theme .btn-secondary:hover {
+    background-color: var(--primary-color);
+  }
+  
+  /* Tarjetas de servicios */
+  body.web-services-theme .service-icon {
+    color: var(--primary-color);
+    background-color: rgba(142, 68, 173, 0.1);
+  }
+  
+  body.web-services-theme .service-card:hover .service-icon {
+    background-color: var(--primary-color);
+    color: white;
+  }
+  
+  /* Iconos específicos por servicio */
+  body.web-services-theme .service-card:nth-child(1) .service-icon {
+    color: var(--code-color); /* Diseño y Desarrollo Web */
+  }
+  
+  body.web-services-theme .service-card:nth-child(2) .service-icon {
+    color: var(--primary-color); /* Aplicaciones Móviles */
+  }
+  
+  body.web-services-theme .service-card:nth-child(3) .service-icon {
+    color: var(--ai-color); /* Integración de IA */
+  }
+  
+  body.web-services-theme .service-card:nth-child(4) .service-icon {
+    color: var(--secondary-color); /* Sistemas de Gestión */
+  }
+  
+  body.web-services-theme .service-card:nth-child(5) .service-icon {
+    color: var(--data-color); /* Análisis de Datos */
+  }
+  
+  body.web-services-theme .service-card:nth-child(6) .service-icon {
+    color: var(--accent-color); /* Automatización de Procesos */
+  }
+  
+  /* Proceso */
+  body.web-services-theme .process-step {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: var(--box-shadow);
+    position: relative;
+    padding: 30px;
+    transition: var(--transition);
+  }
+  
+  body.web-services-theme .process-step:hover {
+    transform: translateY(-10px);
+  }
+  
+  body.web-services-theme .step-number {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    opacity: 0.2;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+  }
+  
+  body.web-services-theme .step-content h3 {
+    color: var(--primary-color);
+  }
+  
+  /* Tecnologías */
+  body.web-services-theme .tech-category {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: var(--box-shadow);
+    padding: 30px;
+    transition: var(--transition);
+  }
+  
+  body.web-services-theme .tech-category:hover {
+    transform: translateY(-5px);
+  }
+  
+  body.web-services-theme .tech-category h3 {
+    color: var(--primary-color);
+  }
+  
+  body.web-services-theme .tech-item {
+    background-color: var(--light-color);
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    color: var(--dark-color);
+    transition: var(--transition);
+  }
+  
+  body.web-services-theme .tech-item:hover {
+    background-color: var(--primary-color);
+    color: white;
+  }
+  
+  /* Proyectos */
+  body.web-services-theme .project-card {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
+    transition: var(--transition);
+  }
+  
+  body.web-services-theme .project-card:hover {
+    transform: translateY(-10px);
+  }
+  
+  body.web-services-theme .project-info h3 {
+    color: var(--primary-color);
+  }
+  
+  body.web-services-theme .project-tech span,
+  body.web-services-theme .project-results span {
+    color: var(--primary-color);
+    font-weight: 600;
+  }
+  
+  /* CTA */
+  body.web-services-theme .cta {
+    background: linear-gradient(rgba(142, 68, 173, 0.85), rgba(155, 89, 182, 0.85)), 
+                url('/api/placeholder/1200/400') no-repeat center center/cover;
+  }
+  
+  /* Footer */
+  body.web-services-theme footer .footer-links h3::after,
+  body.web-services-theme footer .footer-companies h3::after,
+  body.web-services-theme footer .footer-newsletter h3::after {
+    background-color: var(--accent-color);
+  }
+  
+  body.web-services-theme footer .footer-newsletter button {
+    background-color: var(--primary-color);
+  }
+  
+  body.web-services-theme footer .footer-newsletter button:hover {
+    background-color: var(--accent-color);
+  }
+  
+  /* Secciones con fondos alternados */
+  body.web-services-theme .company-details, 
+  body.web-services-theme .process,
+  body.web-services-theme .projects {
+    background-color: white;
+  }
+  
+  body.web-services-theme .services, 
+  body.web-services-theme .technologies {
+    background-color: var(--light-color);
+  }
+  
+  /* Efecto de código para la sección de tecnologías */
+  body.web-services-theme .technologies::before {
+    content: '{ }';
+    position: absolute;
+    right: 5%;
+    top: 50px;
+    font-size: 15rem;
+    opacity: 0.03;
+    font-family: monospace;
+    color: var(--primary-color);
+    z-index: 0;
+  }
+  
+  /* Media queries */
+  @media (max-width: 768px) {
+    body.web-services-theme .technologies::before {
+      display: none;
+    }
+  }
