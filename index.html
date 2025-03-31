@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,6 +13,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Aptos:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <header>
         <nav>
@@ -55,7 +57,8 @@
                     <i class="fas fa-heartbeat"></i>
                 </div>
                 <h3>RenovaCare</h3>
-                <p>Plataforma de atención online para psicología, psiquiatría, dermatología y entrenamiento físico para personas con obesidad.</p>
+                <p>Plataforma de atención online para psicología, psiquiatría, dermatología y entrenamiento físico para
+                    personas con obesidad.</p>
                 <a href="#" class="btn-secondary">Conocer más</a>
             </div>
 
@@ -64,8 +67,9 @@
                     <i class="fas fa-chart-line"></i>
                 </div>
                 <h3>Data Sport</h3>
-                <p>Plataforma de recolección de datos deportivos para la mejora en el rendimiento deportivo y mejora en las políticas públicas para deportes.</p>
-                <a href="#" class="btn-secondary">Conocer más</a>
+                <p>Plataforma de recolección de datos deportivos para la mejora en el rendimiento deportivo y mejora en
+                    las políticas públicas para deportes.</p>
+                <a href="data_sport.html" class="btn-secondary">Conocer más</a>
             </div>
 
             <div class="company-card">
@@ -73,8 +77,9 @@
                     <i class="fas fa-hard-hat"></i>
                 </div>
                 <h3>Constructora Atlas</h3>
-                <p>Dedicados a la construcción, recuperación e instalación de proyectos deportivos con los más altos estándares de calidad.</p>
-                <a href="#" class="btn-secondary">Conocer más</a>
+                <p>Dedicados a la construcción, recuperación e instalación de proyectos deportivos con los más altos
+                    estándares de calidad.</p>
+                <a href="constructora.html" class="btn-secondary">Conocer más</a>
             </div>
 
             <div class="company-card">
@@ -82,8 +87,18 @@
                     <i class="fas fa-lightbulb"></i>
                 </div>
                 <h3>Atlas Consulting</h3>
-                <p>Consultoría especializada en proyectos deportivos, esports, energéticos y otros sectores estratégicos.</p>
-                <a href="#" class="btn-secondary">Conocer más</a>
+                <p>Consultoría especializada en proyectos deportivos, esports, energéticos y otros sectores
+                    estratégicos.</p>
+                <a href="consulting.html" class="btn-secondary">Conocer más</a>
+            </div>
+            <div class="company-card">
+                <div class="company-icon">
+                    <i class="fas fa-lightbulb"></i>
+                </div>
+                <h3>Atlas servicios web</h3>
+                <p>Prestamos servicios de creación de sitios web, ademas de automatizaciones para mejorar la gestión o
+                    trabajos repetitivos.</p>
+                <a href="web_services.html" class="btn-secondary">Conocer más</a>
             </div>
         </div>
     </section>
@@ -160,8 +175,10 @@
             </div>
             <div class="about-text">
                 <h3>Impulsando el cambio desde múltiples frentes</h3>
-                <p>En Grupo Atlas, creemos en la integración de tecnología, innovación y experiencia para crear soluciones que transformen industrias completas. Nuestro enfoque multidisciplinario nos permite abordar desafíos complejos desde diferentes ángulos.</p>
-                
+                <p>En Grupo Atlas, creemos en la integración de tecnología, innovación y experiencia para crear
+                    soluciones que transformen industrias completas. Nuestro enfoque multidisciplinario nos permite
+                    abordar desafíos complejos desde diferentes ángulos.</p>
+
                 <div class="values">
                     <div class="value-item">
                         <i class="fas fa-medal"></i>
@@ -275,7 +292,7 @@
 
     <script>
         // Menú móvil toggle
-        document.querySelector('.menu-toggle').addEventListener('click', function() {
+        document.querySelector('.menu-toggle').addEventListener('click', function () {
             document.querySelector('.nav-menu').classList.toggle('active');
         });
 
@@ -294,9 +311,9 @@
             btn.addEventListener('click', () => {
                 document.querySelector('.filter-btn.active').classList.remove('active');
                 btn.classList.add('active');
-                
+
                 const filter = btn.getAttribute('data-filter');
-                
+
                 document.querySelectorAll('.portfolio-item').forEach(item => {
                     if (filter === 'all' || item.classList.contains(filter)) {
                         item.style.display = 'block';
@@ -308,4 +325,5 @@
         });
     </script>
 </body>
+
 </html>
