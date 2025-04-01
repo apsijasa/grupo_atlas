@@ -8,6 +8,7 @@
     <link rel="icon" href="asset/image/favicon-16x16.png" type="image/x-icon">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/heroes.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -42,16 +43,16 @@
                 <li><a href="#empresas">Nuestras Empresas</a></li>
                 <li><a href="#portfolio">Portafolio</a></li>
                 <li><a href="#about">Nosotros</a></li>
-                <li><a href="#contact">Contacto</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
             </ul>
         </nav>
     </header>
-    
-    <section id="home" class="hero">
+
+    <section id="home" class="hero hero-home">
         <div class="hero-content">
             <h1>Innovación y excelencia en múltiples industrias</h1>
             <p>Soluciones integrales para un mundo en constante evolución</p>
-            <a href="/asset/image/imagen_jumbotron.jpg" class="btn-primary">Descubrir nuestras empresas</a>
+            <a href="#empresas" class="btn-primary">Descubrir nuestras empresas</a>
         </div>
     </section>
 
@@ -210,7 +211,7 @@
         </div>
     </section>
 
-    
+
 
     <footer>
         <div class="footer-content">
@@ -256,7 +257,7 @@
         document.querySelector('.menu-toggle').addEventListener('click', function () {
             document.querySelector('.nav-menu').classList.toggle('active');
         });
-    
+
         // Navegación smooth scroll
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
@@ -269,10 +270,10 @@
                 }
             });
         });
-    
+
         // Manejo del menú desplegable en móvil
         document.querySelectorAll('.dropdown-toggle').forEach(toggle => {
-            toggle.addEventListener('click', function(e) {
+            toggle.addEventListener('click', function (e) {
                 if (window.innerWidth <= 768) {
                     e.preventDefault();
                     this.parentElement.classList.toggle('active');

@@ -19,9 +19,26 @@
     background-color: var(--light-color);
   }
   
-  body.consulting-theme .hero {
-    background: linear-gradient(rgba(52, 152, 219, 0.8), rgba(41, 128, 185, 0.8)), 
-                url('asset/image/imagen_jumbotron.jpg') no-repeat center center/cover;
+  body.web-services-theme .hero {
+    background: none !important;
+    background-color: rgba(22, 21, 29, 0.95) !important;
+  }
+  
+  /* Asegurar que el contenedor de glitch ocupe todo el espacio */
+  #letter-glitch-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+  
+  /* Asegurar que el contenido está por encima del efecto */
+  .hero .hero-content {
+    position: relative;
+    z-index: 2;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
   }
   
   /* Logos y navegación */
@@ -204,12 +221,12 @@
   
   body.consulting-theme .hero {
     background: linear-gradient(rgba(52, 152, 219, 0.8), rgba(41, 128, 185, 0.8)), 
-                url('asset/image/imagen_jumbotron.jpg') no-repeat center center/cover;
+                url('') no-repeat center center/cover;
   }
   
 /* Estilo específico para el hero de consulting con la nueva imagen */
 #consulting-hero {
-  background: url('/asset/image/ideas\ 16_9.png') no-repeat center center/cover;
+  background: url('/asset/image/ideas\ 16_9.pn') no-repeat center center/cover;
   background-attachment: fixed;
   position: relative;
   overflow: hidden;

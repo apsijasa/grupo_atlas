@@ -1,0 +1,180 @@
+/* 
+ * heroes.css
+ * Estilos específicos para las secciones hero de cada página del sitio Grupo Atlas
+ */
+
+/* Estilos base para todos los heroes */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    padding-top: 80px;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3); /* Reducido a 0.3 para mayor visibilidad de la imagen original */
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+    color: white;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    animation: fadeInDown 1s ease;
+}
+
+.hero-content p {
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+    animation: fadeInUp 1s ease 0.3s;
+    animation-fill-mode: both;
+}
+
+.hero-content .btn-primary {
+    animation: fadeInUp 1s ease 0.6s;
+    animation-fill-mode: both;
+}
+
+/* Hero específico - Home */
+.hero-home {
+    background: url('/asset/image/heroes/home-hero.jpg') no-repeat center center/cover;
+}
+
+/* Hero específico - Atlas Sport */
+.hero-sport {
+    background: url('/asset/image/heroes/sport-hero.png') no-repeat center center/cover;
+    background-attachment: fixed;
+}
+
+/* Hero específico - Constructora */
+.hero-constructora {
+    background: url('/asset/image/heroes/constructora-hero.jpg') no-repeat center center/cover;
+}
+
+/* Hero específico - Consulting */
+.hero-consulting {
+    background: url('/asset/image/heroes/consulting-hero.png') no-repeat center center/cover;
+    background-attachment: fixed;
+}
+
+/* Hero específico - Web Services */
+.hero-web {
+    background: url('/asset/image/heroes/web-services-hero.jpg') no-repeat center center/cover;
+}
+
+/* Hero específico - Web Services */
+.hero-contacto {
+    background: url('/asset/image/heroes/contacto-hero.jpg') no-repeat center center/cover;
+}
+
+/* Estilos especiales para la superposición de LetterGlitch en Web Services */
+.hero-web #letter-glitch-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.hero-web .hero-content {
+    z-index: 3;
+}
+
+/* Hero específico - Contacto */
+.hero-contacto {
+    height: 60vh;
+    background: url('../asset/image/heroes/contacto-hero.jpg') no-repeat center center/cover;
+}
+
+/* Animaciones */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Ajustes responsive */
+@media (max-width: 1024px) {
+    .hero-content h1 {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        height: 70vh;
+        background-attachment: scroll !important; /* Desactivar parallax en móviles */
+    }
+    
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero-content p {
+        font-size: 1.1rem;
+    }
+    
+    .hero-contacto {
+        height: 50vh;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    
+    .hero-content p {
+        font-size: 1rem;
+    }
+}
+
+/* Adaptaciones para pantallas grandes */
+@media (min-width: 1920px) {
+    .hero {
+        background-size: 100% auto;
+    }
+}
+
+/* Adaptaciones para dispositivos con orientación horizontal */
+@media (max-height: 600px) and (orientation: landscape) {
+    .hero {
+        height: auto;
+        min-height: 100vh;
+        padding: 100px 0;
+    }
+}
