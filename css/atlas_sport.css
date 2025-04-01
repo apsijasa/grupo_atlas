@@ -568,7 +568,7 @@ border-color: var(--primary-color);
 
 /* Estilo específico para el hero de consulting con la nueva imagen */
 #consulting-hero {
-background: url('/asset/image/analisis\ deportivo.png') no-repeat center center/cover;
+background: url('/asset/image/heroes/sport-hero.jpg') no-repeat center center/cover;
 background-attachment: fixed;
 position: relative;
 overflow: hidden;
