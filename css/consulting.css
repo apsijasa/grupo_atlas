@@ -202,9 +202,285 @@
     background-color: var(--light-color);
   }
   
+  body.consulting-theme .hero {
+    background: linear-gradient(rgba(52, 152, 219, 0.8), rgba(41, 128, 185, 0.8)), 
+                url('asset/image/imagen_jumbotron.jpg') no-repeat center center/cover;
+  }
+  
+/* Estilo específico para el hero de consulting con la nueva imagen */
+#consulting-hero {
+  background: url('/asset/image/ideas\ 16_9.png') no-repeat center center/cover;
+  background-attachment: fixed;
+  position: relative;
+  overflow: hidden;
+    }
+      
+#consulting-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at center, transparent 30%, rgba(0, 0, 0, 0.2) 100%);
+  }
+  
+#consulting-hero .hero-content {
+    position: relative;
+    z-index: 2;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  }
+
+  /* Diseño moderno para la sección de Áreas de Especialización */
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.services {
+  padding: 100px 0;
+  background-color: #f8f9fa;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Elemento decorativo de fondo */
+.services::before {
+  content: "";
+  position: absolute;
+  top: -50px;
+  right: -50px;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: linear-gradient(45deg, rgba(52, 152, 219, 0.1), rgba(155, 89, 182, 0.1));
+  z-index: 0;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 70px;
+  position: relative;
+  z-index: 1;
+}
+
+.section-header h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 20px;
+  position: relative;
+  display: inline-block;
+}
+
+.section-header h2::after {
+  content: "";
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(90deg, #3498db, #9b59b6);
+  border-radius: 3px;
+}
+
+.section-header p {
+  font-size: 1.1rem;
+  color: #7f8c8d;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 30px;
+  position: relative;
+  z-index: 1;
+}
+
+.service-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 5px 30px rgba(0, 0, 0, 0.05);
+  padding: 40px 30px;
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.service-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 5px;
+  height: 0;
+  background: linear-gradient(to bottom, #3498db, #9b59b6);
+  transition: height 0.5s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-15px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.service-card:hover::before {
+  height: 100%;
+}
+
+.service-icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  margin-bottom: 25px;
+  background-color: #f1f7ff;
+  color: #3498db;
+  transition: all 0.4s ease;
+}
+
+.service-card:hover .service-icon {
+  background-color: #3498db;
+  color: white;
+  transform: scale(1.1);
+}
+
+.service-card h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+}
+
+.service-card:hover h3 {
+  transform: translateX(10px);
+}
+
+.service-card p {
+  color: #7f8c8d;
+  font-size: 1rem;
+  line-height: 1.7;
+  flex-grow: 1;
+}
+
+/* Estilos específicos para cada tarjeta */
+.service-card:nth-child(1) .service-icon {
+  background-color: rgba(52, 152, 219, 0.1);
+  color: #3498db;
+}
+
+.service-card:nth-child(1):hover .service-icon {
+  background-color: #3498db;
+  color: white;
+}
+
+.service-card:nth-child(2) .service-icon {
+  background-color: rgba(231, 76, 60, 0.1);
+  color: #e74c3c;
+}
+
+.service-card:nth-child(2):hover .service-icon {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.service-card:nth-child(3) .service-icon {
+  background-color: rgba(46, 204, 113, 0.1);
+  color: #2ecc71;
+}
+
+.service-card:nth-child(3):hover .service-icon {
+  background-color: #2ecc71;
+  color: white;
+}
+
+.service-card:nth-child(4) .service-icon {
+  background-color: rgba(155, 89, 182, 0.1);
+  color: #9b59b6;
+}
+
+.service-card:nth-child(4):hover .service-icon {
+  background-color: #9b59b6;
+  color: white;
+}
+
+.service-card:nth-child(5) .service-icon {
+  background-color: rgba(241, 196, 15, 0.1);
+  color: #f1c40f;
+}
+
+.service-card:nth-child(5):hover .service-icon {
+  background-color: #f1c40f;
+  color: white;
+}
+
+.service-card:nth-child(6) .service-icon {
+  background-color: rgba(26, 188, 156, 0.1);
+  color: #1abc9c;
+}
+
+.service-card:nth-child(6):hover .service-icon {
+  background-color: #1abc9c;
+  color: white;
+}
+
+
   /* Media queries */
   @media (max-width: 768px) {
     body.consulting-theme .case-study {
       grid-template-columns: 1fr;
     }
   }
+
+  /* Responsive */
+@media (max-width: 1200px) {
+  .services-grid {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+  
+  .service-card {
+    padding: 30px 25px;
+  }
+}
+
+@media (max-width: 768px) {
+  .services {
+    padding: 70px 0;
+  }
+  
+  .section-header h2 {
+    font-size: 2rem;
+  }
+  
+  .services-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 25px;
+  }
+}
+
+@media (max-width: 576px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  .service-card {
+    text-align: center;
+  }
+  
+  .service-icon {
+    margin: 0 auto 20px;
+  }
+}
