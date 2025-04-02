@@ -130,45 +130,43 @@
 
         <div class="portfolio-grid">
             <div class="portfolio-item renovacare">
-                <img src="/api/placeholder/600/400" alt="Proyecto RenovaCare">
+                <img src="asset/image/logo renovafit.png" alt="Proyecto RenovaCare">
                 <div class="portfolio-info">
                     <h3>Plataforma de Telemedicina</h3>
                     <p>RenovaCare</p>
+                    <a href="https://apsijasa.github.io/renovafit/" class="portfolio-button">Ver detalles</a>
                 </div>
             </div>
             <div class="portfolio-item datasport">
-                <img src="/api/placeholder/600/400" alt="Proyecto Data Sport">
+                <img src="asset/image/coaching sport.jpg" alt="Proyecto Data Sport">
                 <div class="portfolio-info">
                     <h3>Análisis de Rendimiento Olímpico</h3>
                     <p>Data Sport</p>
+                    <a href="atlas_sport.html" class="portfolio-button">Ver detalles</a>
                 </div>
             </div>
             <div class="portfolio-item construccion">
-                <img src="/api/placeholder/600/400" alt="Proyecto Constructora">
+                <img src="asset/image/cerrillos piscina.jpg" alt="Proyecto Constructora">
                 <div class="portfolio-info">
-                    <h3>Estadio Multideportivo</h3>
+                    <h3>Centro Acuático Cerrillos</h3>
                     <p>Constructora Atlas</p>
+                    <a href="constructora.html" class="portfolio-button">Ver detalles</a>
                 </div>
             </div>
             <div class="portfolio-item consulting">
-                <img src="/api/placeholder/600/400" alt="Proyecto Consulting">
+                <img src="asset/image/consulting_help.jpg" alt="Proyecto Consulting">
                 <div class="portfolio-info">
                     <h3>Estrategia eSports Nacional</h3>
                     <p>Atlas Consulting</p>
-                </div>
-            </div>
-            <div class="portfolio-item renovacare">
-                <img src="/api/placeholder/600/400" alt="Proyecto RenovaCare">
-                <div class="portfolio-info">
-                    <h3>Programa Integral de Bienestar</h3>
-                    <p>RenovaCare</p>
+                    <a href="consulting.html" class="portfolio-button">Ver detalles</a>
                 </div>
             </div>
             <div class="portfolio-item datasport">
-                <img src="/api/placeholder/600/400" alt="Proyecto Data Sport">
+                <img src="asset/image/lenguajes programacion.jpg" alt="Proyecto web_services">
                 <div class="portfolio-info">
-                    <h3>Dashboard de Métricas Deportivas</h3>
-                    <p>Data Sport</p>
+                    <h3>Desarrollos de programas</h3>
+                    <p>Web Services</p>
+                    <a href="web_services.html" class="portfolio-button">Ver detalles</a>
                 </div>
             </div>
         </div>
@@ -257,7 +255,7 @@
         document.querySelector('.menu-toggle').addEventListener('click', function () {
             document.querySelector('.nav-menu').classList.toggle('active');
         });
-
+    
         // Navegación smooth scroll
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
@@ -270,7 +268,7 @@
                 }
             });
         });
-
+    
         // Manejo del menú desplegable en móvil
         document.querySelectorAll('.dropdown-toggle').forEach(toggle => {
             toggle.addEventListener('click', function (e) {
@@ -278,6 +276,19 @@
                     e.preventDefault();
                     this.parentElement.classList.toggle('active');
                 }
+            });
+        });
+        
+        // Funcionalidad adicional para los botones del portafolio
+        document.querySelectorAll('.portfolio-button').forEach(button => {
+            button.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-5px)';
+                this.style.boxShadow = '0 10px 20px rgba(0, 0, 0, 0.2)';
+            });
+            
+            button.addEventListener('mouseleave', function() {
+                this.style.transform = '';
+                this.style.boxShadow = '';
             });
         });
     </script>

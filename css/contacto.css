@@ -1,6 +1,6 @@
 /* 
  * contacto.css
- * Estilos específicos para la página de contacto de Grupo Atlas (versión simplificada)
+ * Estilos específicos para la página de contacto de Grupo Atlas
  */
 
 /* Estilos base para la página de contacto */
@@ -53,6 +53,7 @@
     margin-bottom: 8px;
     font-weight: 500;
     color: var(--dark-color);
+    line-height: 1.4; /* Espaciado de línea consistente */
 }
 
 .form-group input,
@@ -95,30 +96,59 @@
     gap: 20px;
 }
 
-/* Checkbox y radio buttons */
+/* Checkbox y radio buttons mejorados */
 .checkbox-group {
     display: flex;
-    align-items: flex-start;
+    align-items: center; /* Alineación centrada verticalmente */
+    gap: 10px; /* Espacio consistente entre checkbox y texto */
 }
 
 .checkbox-group input[type="checkbox"] {
-    margin-right: 10px;
-    margin-top: 3px;
+    margin: 0; /* Eliminar márgenes predeterminados */
+    height: 18px; /* Tamaño consistente */
+    width: 18px; /* Tamaño consistente */
+    flex-shrink: 0; /* Evita que el checkbox se encoja */
 }
 
+.checkbox-group label {
+    margin: 0; /* Eliminar márgenes predeterminados */
+    line-height: 1.4; /* Mejor espaciado de línea para texto */
+}
+
+/* Mejorar la alineación de las opciones de radio */
 .radio-group {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
+    margin-top: 5px; /* Espacio consistente después de la etiqueta */
 }
 
 .radio-option {
     display: flex;
     align-items: center;
+    gap: 8px; /* Espacio entre radio y texto */
 }
 
 .radio-option input[type="radio"] {
-    margin-right: 8px;
+    margin: 0; /* Eliminar márgenes predeterminados */
+    height: 18px; /* Tamaño consistente */
+    width: 18px; /* Tamaño consistente */
+    flex-shrink: 0; /* Evita que el radio se encoja */
+}
+
+.radio-option label {
+    margin: 0; /* Eliminar márgenes predeterminados */
+}
+
+/* Alineación específica para checkbox de política de privacidad */
+.form-group.checkbox-group {
+    display: flex;
+    align-items: flex-start; /* Alineación al inicio para textos multilinea */
+    gap: 10px;
+}
+
+.form-group.checkbox-group input[type="checkbox"] {
+    margin-top: 3px; /* Alinea el checkbox con la primera línea de texto */
 }
 
 /* Estilos para campo de archivo */
@@ -204,6 +234,7 @@
     color: var(--primary-color);
     text-decoration: underline;
     font-weight: 500;
+    display: inline; /* Asegura que se mantenga en línea con el texto */
 }
 
 .policy-link:hover {
@@ -221,6 +252,14 @@
     .form-row {
         grid-template-columns: 1fr;
         gap: 20px;
+    }
+    
+    .checkbox-group, .radio-option {
+        gap: 6px; /* Espacio más compacto en pantallas pequeñas */
+    }
+    
+    .radio-group {
+        gap: 12px;
     }
 }
 
