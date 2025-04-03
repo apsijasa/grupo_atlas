@@ -1,4 +1,4 @@
-// Waves.js - Componente de animación de ondas para el hero section
+// Waves.js - Componente de animación de ondas para el hero section con detección de página
 class Grad {
     constructor(x, y, z) {
       this.x = x; this.y = y; this.z = z;
@@ -58,219 +58,195 @@ class Grad {
     }
   }
   
-  document.addEventListener('DOMContentLoaded', function() {
-    class Waves {
-      constructor(options = {}) {
-        // Configuración predeterminada
-        this.config = {
-          lineColor: options.lineColor || "#fff",
-          backgroundColor: options.backgroundColor || "rgba(255, 255, 255, 0.2)",
-          waveSpeedX: options.waveSpeedX || 0.02,
-          waveSpeedY: options.waveSpeedY || 0.01,
-          waveAmpX: options.waveAmpX || 40,
-          waveAmpY: options.waveAmpY || 20,
-          friction: options.friction || 0.9,
-          tension: options.tension || 0.01,
-          maxCursorMove: options.maxCursorMove || 120,
-          xGap: options.xGap || 12,
-          yGap: options.yGap || 36
-        };
+  // Crear la clase Waves y hacerla disponible globalmente
+  window.Waves = class Waves {
+    constructor(options = {}) {
+      // Configuración predeterminada
+      this.config = {
+        lineColor: options.lineColor || "#fff",
+        backgroundColor: options.backgroundColor || "rgba(255, 255, 255, 0.2)",
+        waveSpeedX: options.waveSpeedX || 0.02,
+        waveSpeedY: options.waveSpeedY || 0.01,
+        waveAmpX: options.waveAmpX || 40,
+        waveAmpY: options.waveAmpY || 20,
+        friction: options.friction || 0.9,
+        tension: options.tension || 0.01,
+        maxCursorMove: options.maxCursorMove || 120,
+        xGap: options.xGap || 12,
+        yGap: options.yGap || 36
+      };
   
-        this.container = document.querySelector('.waves');
-        if (!this.container) {
-          console.error('No se encontró el contenedor para Waves');
-          return;
-        }
-  
-        this.canvas = document.createElement('canvas');
-        this.canvas.className = 'waves-canvas';
-        this.container.appendChild(this.canvas);
-        this.ctx = this.canvas.getContext('2d');
-  
-        this.bounding = { width: 0, height: 0, left: 0, top: 0 };
-        this.noise = new Noise(Math.random());
-        this.lines = [];
-        this.mouse = {
-          x: -10, y: 0, lx: 0, ly: 0, sx: 0, sy: 0, v: 0, vs: 0, a: 0, set: false
-        };
-        this.frameId = null;
-  
-        this.initialize();
+      this.container = document.querySelector('.waves');
+      if (!this.container) {
+        console.error('No se encontró el contenedor para Waves');
+        return;
       }
   
-      initialize() {
-        console.log("Waves mounted");
-        this.setSize();
-        this.setLines();
-        this.frameId = requestAnimationFrame(this.tick.bind(this));
+      this.canvas = document.createElement('canvas');
+      this.canvas.className = 'waves-canvas';
+      this.container.appendChild(this.canvas);
+      this.ctx = this.canvas.getContext('2d');
   
-        window.addEventListener("resize", this.setSize.bind(this));
-        window.addEventListener("mousemove", this.onMouseMove.bind(this));
-        window.addEventListener("touchmove", this.onTouchMove.bind(this), { passive: false });
-      }
+      this.bounding = { width: 0, height: 0, left: 0, top: 0 };
+      this.noise = new Noise(Math.random());
+      this.lines = [];
+      this.mouse = {
+        x: -10, y: 0, lx: 0, ly: 0, sx: 0, sy: 0, v: 0, vs: 0, a: 0, set: false
+      };
+      this.frameId = null;
   
-      setSize() {
-        this.bounding = this.container.getBoundingClientRect();
-        this.canvas.width = this.bounding.width;
-        this.canvas.height = this.bounding.height;
-      }
+      this.initialize();
+    }
   
-      setLines() {
-        const { width, height } = this.bounding;
-        this.lines = [];
-        const oWidth = width + 200, oHeight = height + 30;
-        const { xGap, yGap } = this.config;
-        const totalLines = Math.ceil(oWidth / xGap);
-        const totalPoints = Math.ceil(oHeight / yGap);
-        const xStart = (width - xGap * totalLines) / 2;
-        const yStart = (height - yGap * totalPoints) / 2;
-        
-        for (let i = 0; i <= totalLines; i++) {
-          const pts = [];
-          for (let j = 0; j <= totalPoints; j++) {
-            pts.push({
-              x: xStart + xGap * i,
-              y: yStart + yGap * j,
-              wave: { x: 0, y: 0 },
-              cursor: { x: 0, y: 0, vx: 0, vy: 0 }
-            });
-          }
-          this.lines.push(pts);
-        }
-      }
+    initialize() {
+      console.log("Waves mounted");
+      this.setSize();
+      this.setLines();
+      this.frameId = requestAnimationFrame(this.tick.bind(this));
   
-      movePoints(time) {
-        const { waveSpeedX, waveSpeedY, waveAmpX, waveAmpY, friction, tension, maxCursorMove } = this.config;
-        const lines = this.lines, mouse = this.mouse, noise = this.noise;
-        
-        lines.forEach((pts) => {
-          pts.forEach((p) => {
-            const move = noise.perlin2(
-              (p.x + time * waveSpeedX) * 0.002,
-              (p.y + time * waveSpeedY) * 0.0015
-            ) * 12;
-            p.wave.x = Math.cos(move) * waveAmpX;
-            p.wave.y = Math.sin(move) * waveAmpY;
+      window.addEventListener("resize", this.setSize.bind(this));
+      window.addEventListener("mousemove", this.onMouseMove.bind(this));
+      window.addEventListener("touchmove", this.onTouchMove.bind(this), { passive: false });
+    }
   
-            const dx = p.x - mouse.sx, dy = p.y - mouse.sy;
-            const dist = Math.hypot(dx, dy), l = Math.max(175, mouse.vs);
-            if (dist < l) {
-              const s = 1 - dist / l;
-              const f = Math.cos(dist * 0.001) * s;
-              p.cursor.vx += Math.cos(mouse.a) * f * l * mouse.vs * 0.00065;
-              p.cursor.vy += Math.sin(mouse.a) * f * l * mouse.vs * 0.00065;
-            }
+    setSize() {
+      this.bounding = this.container.getBoundingClientRect();
+      this.canvas.width = this.bounding.width;
+      this.canvas.height = this.bounding.height;
+    }
   
-            p.cursor.vx += (0 - p.cursor.x) * tension;
-            p.cursor.vy += (0 - p.cursor.y) * tension;
-            p.cursor.vx *= friction;
-            p.cursor.vy *= friction;
-            p.cursor.x += p.cursor.vx * 2;
-            p.cursor.y += p.cursor.vy * 2;
-            p.cursor.x = Math.min(maxCursorMove, Math.max(-maxCursorMove, p.cursor.x));
-            p.cursor.y = Math.min(maxCursorMove, Math.max(-maxCursorMove, p.cursor.y));
+    setLines() {
+      const { width, height } = this.bounding;
+      this.lines = [];
+      const oWidth = width + 200, oHeight = height + 30;
+      const { xGap, yGap } = this.config;
+      const totalLines = Math.ceil(oWidth / xGap);
+      const totalPoints = Math.ceil(oHeight / yGap);
+      const xStart = (width - xGap * totalLines) / 2;
+      const yStart = (height - yGap * totalPoints) / 2;
+      
+      for (let i = 0; i <= totalLines; i++) {
+        const pts = [];
+        for (let j = 0; j <= totalPoints; j++) {
+          pts.push({
+            x: xStart + xGap * i,
+            y: yStart + yGap * j,
+            wave: { x: 0, y: 0 },
+            cursor: { x: 0, y: 0, vx: 0, vy: 0 }
           });
-        });
-      }
-  
-      moved(point, withCursor = true) {
-        const x = point.x + point.wave.x + (withCursor ? point.cursor.x : 0);
-        const y = point.y + point.wave.y + (withCursor ? point.cursor.y : 0);
-        return { x: Math.round(x * 10) / 10, y: Math.round(y * 10) / 10 };
-      }
-  
-      drawLines() {
-        const { width, height } = this.bounding;
-        this.ctx.clearRect(0, 0, width, height);
-        this.ctx.beginPath();
-        this.ctx.strokeStyle = this.config.lineColor;
-        
-        this.lines.forEach((points) => {
-          let p1 = this.moved(points[0], false);
-          this.ctx.moveTo(p1.x, p1.y);
-          points.forEach((p, idx) => {
-            const isLast = idx === points.length - 1;
-            p1 = this.moved(p, !isLast);
-            const p2 = this.moved(points[idx + 1] || points[points.length - 1], !isLast);
-            this.ctx.lineTo(p1.x, p1.y);
-            if (isLast) this.ctx.moveTo(p2.x, p2.y);
-          });
-        });
-        
-        this.ctx.stroke();
-      }
-  
-      tick(t) {
-        const mouse = this.mouse;
-        mouse.sx += (mouse.x - mouse.sx) * 0.1;
-        mouse.sy += (mouse.y - mouse.sy) * 0.1;
-        const dx = mouse.x - mouse.lx, dy = mouse.y - mouse.ly;
-        const d = Math.hypot(dx, dy);
-        mouse.v = d;
-        mouse.vs += (d - mouse.vs) * 0.1;
-        mouse.vs = Math.min(100, mouse.vs);
-        mouse.lx = mouse.x; mouse.ly = mouse.y;
-        mouse.a = Math.atan2(dy, dx);
-        this.container.style.setProperty("--x", `${mouse.sx}px`);
-        this.container.style.setProperty("--y", `${mouse.sy}px`);
-  
-        this.movePoints(t);
-        this.drawLines();
-        this.frameId = requestAnimationFrame(this.tick.bind(this));
-      }
-  
-      onMouseMove(e) {
-        this.updateMouse(e.clientX, e.clientY);
-      }
-  
-      onTouchMove(e) {
-        const touch = e.touches[0];
-        this.updateMouse(touch.clientX, touch.clientY);
-      }
-  
-      updateMouse(x, y) {
-        const mouse = this.mouse, b = this.bounding;
-        mouse.x = x - b.left;
-        mouse.y = y - b.top;
-        if (!mouse.set) {
-          mouse.sx = mouse.x; mouse.sy = mouse.y;
-          mouse.lx = mouse.x; mouse.ly = mouse.y;
-          mouse.set = true;
         }
-      }
-  
-      destroy() {
-        if (this.frameId) {
-          cancelAnimationFrame(this.frameId);
-        }
-        window.removeEventListener("resize", this.setSize);
-        window.removeEventListener("mousemove", this.onMouseMove);
-        window.removeEventListener("touchmove", this.onTouchMove);
+        this.lines.push(pts);
       }
     }
   
-    // Inicializar el componente Waves
-    const heroSection = document.querySelector('.hero-home');
-    if (heroSection) {
-      // Crear el contenedor para Waves
-      const wavesContainer = document.createElement('div');
-      wavesContainer.className = 'waves';
-      // Insertar el contenedor como primer hijo del heroSection
-      heroSection.insertBefore(wavesContainer, heroSection.firstChild);
+    movePoints(time) {
+      const { waveSpeedX, waveSpeedY, waveAmpX, waveAmpY, friction, tension, maxCursorMove } = this.config;
+      const lines = this.lines, mouse = this.mouse, noise = this.noise;
+      
+      lines.forEach((pts) => {
+        pts.forEach((p) => {
+          const move = noise.perlin2(
+            (p.x + time * waveSpeedX) * 0.002,
+            (p.y + time * waveSpeedY) * 0.0015
+          ) * 12;
+          p.wave.x = Math.cos(move) * waveAmpX;
+          p.wave.y = Math.sin(move) * waveAmpY;
   
-      // Inicializar Waves con la configuración
-      new Waves({
-        lineColor: "#fff",
-        backgroundColor: "rgba(255, 255, 255, 0.2)",
-        waveSpeedX: 0.02,
-        waveSpeedY: 0.01,
-        waveAmpX: 40,
-        waveAmpY: 20,
-        friction: 0.9,
-        tension: 0.01,
-        maxCursorMove: 120,
-        xGap: 12,
-        yGap: 36
+          const dx = p.x - mouse.sx, dy = p.y - mouse.sy;
+          const dist = Math.hypot(dx, dy), l = Math.max(175, mouse.vs);
+          if (dist < l) {
+            const s = 1 - dist / l;
+            const f = Math.cos(dist * 0.001) * s;
+            p.cursor.vx += Math.cos(mouse.a) * f * l * mouse.vs * 0.00065;
+            p.cursor.vy += Math.sin(mouse.a) * f * l * mouse.vs * 0.00065;
+          }
+  
+          p.cursor.vx += (0 - p.cursor.x) * tension;
+          p.cursor.vy += (0 - p.cursor.y) * tension;
+          p.cursor.vx *= friction;
+          p.cursor.vy *= friction;
+          p.cursor.x += p.cursor.vx * 2;
+          p.cursor.y += p.cursor.vy * 2;
+          p.cursor.x = Math.min(maxCursorMove, Math.max(-maxCursorMove, p.cursor.x));
+          p.cursor.y = Math.min(maxCursorMove, Math.max(-maxCursorMove, p.cursor.y));
+        });
       });
     }
-  });
+  
+    moved(point, withCursor = true) {
+      const x = point.x + point.wave.x + (withCursor ? point.cursor.x : 0);
+      const y = point.y + point.wave.y + (withCursor ? point.cursor.y : 0);
+      return { x: Math.round(x * 10) / 10, y: Math.round(y * 10) / 10 };
+    }
+  
+    drawLines() {
+      const { width, height } = this.bounding;
+      this.ctx.clearRect(0, 0, width, height);
+      this.ctx.beginPath();
+      this.ctx.strokeStyle = this.config.lineColor;
+      
+      this.lines.forEach((points) => {
+        let p1 = this.moved(points[0], false);
+        this.ctx.moveTo(p1.x, p1.y);
+        points.forEach((p, idx) => {
+          const isLast = idx === points.length - 1;
+          p1 = this.moved(p, !isLast);
+          const p2 = this.moved(points[idx + 1] || points[points.length - 1], !isLast);
+          this.ctx.lineTo(p1.x, p1.y);
+          if (isLast) this.ctx.moveTo(p2.x, p2.y);
+        });
+      });
+      
+      this.ctx.stroke();
+    }
+  
+    tick(t) {
+      const mouse = this.mouse;
+      mouse.sx += (mouse.x - mouse.sx) * 0.1;
+      mouse.sy += (mouse.y - mouse.sy) * 0.1;
+      const dx = mouse.x - mouse.lx, dy = mouse.y - mouse.ly;
+      const d = Math.hypot(dx, dy);
+      mouse.v = d;
+      mouse.vs += (d - mouse.vs) * 0.1;
+      mouse.vs = Math.min(100, mouse.vs);
+      mouse.lx = mouse.x; mouse.ly = mouse.y;
+      mouse.a = Math.atan2(dy, dx);
+      this.container.style.setProperty("--x", `${mouse.sx}px`);
+      this.container.style.setProperty("--y", `${mouse.sy}px`);
+  
+      this.movePoints(t);
+      this.drawLines();
+      this.frameId = requestAnimationFrame(this.tick.bind(this));
+    }
+  
+    onMouseMove(e) {
+      this.updateMouse(e.clientX, e.clientY);
+    }
+  
+    onTouchMove(e) {
+      const touch = e.touches[0];
+      this.updateMouse(touch.clientX, touch.clientY);
+    }
+  
+    updateMouse(x, y) {
+      const mouse = this.mouse, b = this.bounding;
+      mouse.x = x - b.left;
+      mouse.y = y - b.top;
+      if (!mouse.set) {
+        mouse.sx = mouse.x; mouse.sy = mouse.y;
+        mouse.lx = mouse.x; mouse.ly = mouse.y;
+        mouse.set = true;
+      }
+    }
+  
+    destroy() {
+      if (this.frameId) {
+        cancelAnimationFrame(this.frameId);
+      }
+      window.removeEventListener("resize", this.setSize);
+      window.removeEventListener("mousemove", this.onMouseMove);
+      window.removeEventListener("touchmove", this.onTouchMove);
+    }
+  };
+  
+  // No inicializamos aquí, lo haremos desde waves-hero-implementation.js

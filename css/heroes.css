@@ -59,7 +59,7 @@
 
 /* Hero específico - Atlas Sport */
 .hero-sport {
-    background: url('/asset/image/sport-hero.jpg') no-repeat center center/cover;
+    background: url('asset/image/sport-hero.jpg') no-repeat center center/cover;
     background-attachment: fixed;
 }
 
