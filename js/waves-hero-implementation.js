@@ -6,11 +6,13 @@ document.addEventListener('DOMContentLoaded', function() {
     const currentPage = window.location.pathname.split('/').pop() || 'index.html';
     
     // Aplicar la animación de waves solo en las páginas específicas
-    if (['atlas_sport.html', 'constructora.html', 'consulting.html'].includes(currentPage)) {
+    if (['index.html', 'atlas_sport.html', 'constructora.html', 'consulting.html'].includes(currentPage)) {
       // 1. Identificar la sección hero
       let heroSection;
       
-      if (currentPage === 'atlas_sport.html') {
+      if (currentPage === 'index.html') {
+        heroSection = document.querySelector('.hero-home');
+      } else if (currentPage === 'atlas_sport.html') {
         heroSection = document.querySelector('.hero-sport');
       } else if (currentPage === 'constructora.html') {
         heroSection = document.querySelector('.hero-constructora');

@@ -258,7 +258,7 @@
         document.querySelector('.menu-toggle').addEventListener('click', function () {
             document.querySelector('.nav-menu').classList.toggle('active');
         });
-    
+
         // Navegación smooth scroll
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
@@ -271,7 +271,7 @@
                 }
             });
         });
-    
+
         // Manejo del menú desplegable en móvil
         document.querySelectorAll('.dropdown-toggle').forEach(toggle => {
             toggle.addEventListener('click', function (e) {
@@ -281,22 +281,24 @@
                 }
             });
         });
-        
+
         // Funcionalidad adicional para los botones del portafolio
         document.querySelectorAll('.portfolio-button').forEach(button => {
-            button.addEventListener('mouseenter', function() {
+            button.addEventListener('mouseenter', function () {
                 this.style.transform = 'translateY(-5px)';
                 this.style.boxShadow = '0 10px 20px rgba(0, 0, 0, 0.2)';
             });
-            
-            button.addEventListener('mouseleave', function() {
+
+            button.addEventListener('mouseleave', function () {
                 this.style.transform = '';
                 this.style.boxShadow = '';
             });
         });
     </script>
     <script src="js/whatsapp-button.js"></script>
+    <!-- Añadir al final del body, justo antes de cerrar </body> -->
     <script src="js/waves.js"></script>
+    <script src="js/waves-hero-implementation.js"></script>
 </body>
 
 </html>
