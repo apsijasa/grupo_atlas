@@ -1,678 +1,682 @@
 /* Paleta de colores personalizada para Atlas Consulting */
 :root {
-    --primary-color: #3498db;      /* Azul consultoría - confianza e inteligencia */
-    --secondary-color: #2980b9;    /* Azul oscuro - profesionalismo */
-    --accent-color: #9b59b6;       /* Púrpura - creatividad y estrategia */
-    --dark-color: #2c3e50;         /* Azul muy oscuro - seriedad */
-    --light-color: #ecf0f1;        /* Gris claro - para fondos */
-    --insight-color: #16a085;      /* Verde azulado - datos e insights */
-    --innovation-color: #e74c3c;   /* Rojo - innovación y disrupción */
-    --text-color: #2c3e50;         /* Color de texto principal */
-    --gray-color: #7f8c8d;         /* Gris para textos secundarios */
-    --border-color: #dee2e6;       /* Color para bordes */
-    --box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    --transition: all 0.3s ease;
-  }
-  
-  /* Fondos y secciones */
-  body.consulting-theme {
-    background-color: var(--light-color);
-  }
-  
-  body.web-services-theme .hero {
-    background: none !important;
-    background-color: rgba(22, 21, 29, 0.95) !important;
-  }
-  
-  /* Asegurar que el contenedor de glitch ocupe todo el espacio */
-  #letter-glitch-container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-  }
-  
-  /* Asegurar que el contenido está por encima del efecto */
-  .hero .hero-content {
-    position: relative;
-    z-index: 2;
-    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
-  }
-  
-  /* Logos y navegación */
-  body.consulting-theme .logo-svg path:first-child {
-    fill: var(--dark-color);
-  }
-  
-  body.consulting-theme .logo-svg path:last-child {
-    fill: var(--primary-color);
-  }
-  
-  body.consulting-theme .logo h1,
-  body.consulting-theme .nav-menu a:hover,
-  body.consulting-theme .nav-menu a.active {
-    color: var(--primary-color);
-  }
-  
-  body.consulting-theme .nav-menu a::after,
-  body.consulting-theme .nav-menu a.active::after {
-    background-color: var(--accent-color);
-  }
-  
-  /* Encabezados de sección */
-  body.consulting-theme .section-header h2 {
-    color: var(--primary-color);
-  }
-  
-  body.consulting-theme .section-header h2::after {
-    background-color: var(--accent-color);
-  }
-  
-  /* Botones */
-  body.consulting-theme .btn-primary {
-    background-color: var(--primary-color);
-  }
-  
-  body.consulting-theme .btn-primary:hover {
-    background-color: var(--accent-color);
-  }
-  
-  body.consulting-theme .btn-secondary {
-    color: var(--primary-color);
-    border-color: var(--primary-color);
-  }
-  
-  body.consulting-theme .btn-secondary:hover {
-    background-color: var(--primary-color);
-  }
-  
-  /* Tarjetas de servicios */
-  body.consulting-theme .service-icon {
-    color: var(--primary-color);
-    background-color: var(--light-color);
-  }
-  
-  body.consulting-theme .service-card:hover .service-icon {
-    background-color: var(--primary-color);
-    color: white;
-  }
-  
-  /* Iconos específicos por área de especialización */
-  body.consulting-theme .service-card:nth-child(1) .service-icon {
-    color: var(--primary-color); /* Consultoría Deportiva */
-  }
-  
-  body.consulting-theme .service-card:nth-child(2) .service-icon {
-    color: var(--innovation-color); /* Estrategia en eSports */
-  }
-  
-  body.consulting-theme .service-card:nth-child(3) .service-icon {
-    color: var(--insight-color); /* Proyectos Energéticos */
-  }
-  
-  body.consulting-theme .service-card:nth-child(4) .service-icon {
-    color: var(--accent-color); /* Estrategia Empresarial */
-  }
-  
-  body.consulting-theme .service-card:nth-child(5) .service-icon {
-    color: var(--gray-color); /* Gestión de Cambio */
-  }
-  
-  /* Metodología */
-  body.consulting-theme .methodology-step {
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: var(--box-shadow);
-    position: relative;
-    padding: 30px;
-    transition: var(--transition);
-  }
-  
-  body.consulting-theme .methodology-step:hover {
-    transform: translateY(-10px);
-  }
-  
-  body.consulting-theme .step-number {
-    font-size: 3rem;
-    font-weight: 700;
-    color: var(--primary-color);
-    opacity: 0.2;
-    position: absolute;
-    top: 10px;
-    right: 20px;
-  }
-  
-  body.consulting-theme .step-content h3 {
-    color: var(--primary-color);
-  }
-  
-  /* Casos de estudio */
-  body.consulting-theme .case-study {
-    background-color: white;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: var(--box-shadow);
-    margin-bottom: 30px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0;
-  }
-  
-  body.consulting-theme .case-content h3 {
-    color: var(--primary-color);
-  }
-  
-  body.consulting-theme .case-results .result span {
-    color: var(--primary-color);
-    font-weight: 600;
-  }
-  
-  /* Equipo */
-  body.consulting-theme .team-member {
-    background-color: white;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: var(--box-shadow);
-    transition: var(--transition);
-  }
-  
-  body.consulting-theme .team-member:hover {
-    transform: translateY(-10px);
-  }
-  
-  body.consulting-theme .member-position {
-    color: var(--accent-color);
-  }
-  
-  /* CTA */
-  body.consulting-theme .cta {
-    background: linear-gradient(rgba(52, 152, 219, 0.85), rgba(41, 128, 185, 0.85)), 
-                url('/api/placeholder/1200/400') no-repeat center center/cover;
-  }
-  
-  /* Footer */
-  body.consulting-theme footer .footer-links h3::after,
-  body.consulting-theme footer .footer-companies h3::after,
-  body.consulting-theme footer .footer-newsletter h3::after {
-    background-color: var(--accent-color);
-  }
-  
-  body.consulting-theme footer .footer-newsletter button {
-    background-color: var(--primary-color);
-  }
-  
-  body.consulting-theme footer .footer-newsletter button:hover {
-    background-color: var(--accent-color);
-  }
-  
-  /* Secciones con fondos alternados */
-  body.consulting-theme .company-details, 
-  body.consulting-theme .methodology,
-  body.consulting-theme .team {
-    background-color: white;
-  }
-  
-  body.consulting-theme .services, 
-  body.consulting-theme .case-studies {
-    background-color: var(--light-color);
-  }
-  
-  body.consulting-theme .hero {
-    background: linear-gradient(rgba(52, 152, 219, 0.8), rgba(41, 128, 185, 0.8)), 
-                url('') no-repeat center center/cover;
-  }
-  
-/* Estilo específico para el hero de consulting con la nueva imagen */
-#consulting-hero {
-  background: url('/asset/image/heroes/consulting-hero.jpg') no-repeat center center/cover;
-  background-attachment: fixed;
-  position: relative;
-  overflow: hidden;
-    }
-      
-#consulting-hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: radial-gradient(circle at center, transparent 30%, rgba(0, 0, 0, 0.2) 100%);
-  }
-  
-#consulting-hero .hero-content {
-    position: relative;
-    z-index: 2;
-    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-  }
-
-  /* Diseño moderno para la sección de Áreas de Especialización */
-
-.container {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 0 20px;
+  --primary-color: #3498db;      /* Azul consultoría - confianza e inteligencia */
+  --secondary-color: #2980b9;    /* Azul oscuro - profesionalismo */
+  --accent-color: #9b59b6;       /* Púrpura - creatividad y estrategia */
+  --dark-color: #2c3e50;         /* Azul muy oscuro - seriedad */
+  --light-color: #ecf0f1;        /* Gris claro - para fondos */
+  --insight-color: #16a085;      /* Verde azulado - datos e insights */
+  --innovation-color: #e74c3c;   /* Rojo - innovación y disrupción */
+  --text-color: #2c3e50;         /* Color de texto principal */
+  --gray-color: #7f8c8d;         /* Gris para textos secundarios */
+  --border-color: #dee2e6;       /* Color para bordes */
+  --box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --transition: all 0.3s ease;
 }
 
-.services {
-  padding: 100px 0;
-  background-color: #f8f9fa;
-  position: relative;
-  overflow: hidden;
+/* Fondos y secciones */
+body.consulting-theme {
+  background-color: var(--light-color);
 }
 
-/* Elemento decorativo de fondo */
-.services::before {
-  content: "";
-  position: absolute;
-  top: -50px;
-  right: -50px;
-  width: 300px;
-  height: 300px;
-  border-radius: 50%;
-  background: linear-gradient(45deg, rgba(52, 152, 219, 0.1), rgba(155, 89, 182, 0.1));
-  z-index: 0;
+body.web-services-theme .hero {
+  background: none !important;
+  background-color: rgba(22, 21, 29, 0.95) !important;
 }
 
-.section-header {
-  text-align: center;
-  margin-bottom: 70px;
-  position: relative;
-  z-index: 1;
-}
-
-.section-header h2 {
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: #2c3e50;
-  margin-bottom: 20px;
-  position: relative;
-  display: inline-block;
-}
-
-.section-header h2::after {
-  content: "";
-  position: absolute;
-  bottom: -15px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 80px;
-  height: 3px;
-  background: linear-gradient(90deg, #3498db, #9b59b6);
-  border-radius: 3px;
-}
-
-.section-header p {
-  font-size: 1.1rem;
-  color: #7f8c8d;
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-.services-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-  gap: 30px;
-  position: relative;
-  z-index: 1;
-}
-
-.service-card {
-  background: white;
-  border-radius: 12px;
-  box-shadow: 0 5px 30px rgba(0, 0, 0, 0.05);
-  padding: 40px 30px;
-  transition: all 0.4s ease;
-  position: relative;
-  overflow: hidden;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-}
-
-.service-card::before {
-  content: "";
+/* Asegurar que el contenedor de glitch ocupe todo el espacio */
+#letter-glitch-container {
   position: absolute;
   top: 0;
   left: 0;
-  width: 5px;
-  height: 0;
-  background: linear-gradient(to bottom, #3498db, #9b59b6);
-  transition: height 0.5s ease;
-}
-
-.service-card:hover {
-  transform: translateY(-15px);
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
-}
-
-.service-card:hover::before {
+  width: 100%;
   height: 100%;
+  z-index: 1;
 }
 
-.service-icon {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 32px;
-  margin-bottom: 25px;
-  background-color: #f1f7ff;
-  color: #3498db;
-  transition: all 0.4s ease;
+/* Asegurar que el contenido está por encima del efecto */
+.hero .hero-content {
+  position: relative;
+  z-index: 2;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
 }
 
-.service-card:hover .service-icon {
-  background-color: #3498db;
-  color: white;
-  transform: scale(1.1);
+/* Logos y navegación */
+body.consulting-theme .logo-svg path:first-child {
+  fill: var(--dark-color);
 }
 
-.service-card h3 {
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: #2c3e50;
-  margin-bottom: 20px;
-  transition: all 0.3s ease;
+body.consulting-theme .logo-svg path:last-child {
+  fill: var(--primary-color);
 }
 
-.service-card:hover h3 {
-  transform: translateX(10px);
+body.consulting-theme .logo h1,
+body.consulting-theme .nav-menu a:hover,
+body.consulting-theme .nav-menu a.active {
+  color: var(--primary-color);
 }
 
-.service-card p {
-  color: #7f8c8d;
-  font-size: 1rem;
-  line-height: 1.7;
-  flex-grow: 1;
+body.consulting-theme .nav-menu a::after,
+body.consulting-theme .nav-menu a.active::after {
+  background-color: var(--accent-color);
 }
 
-/* Estilos específicos para cada tarjeta */
-.service-card:nth-child(1) .service-icon {
-  background-color: rgba(52, 152, 219, 0.1);
-  color: #3498db;
+/* Encabezados de sección */
+body.consulting-theme .section-header h2 {
+  color: var(--primary-color);
 }
 
-.service-card:nth-child(1):hover .service-icon {
-  background-color: #3498db;
-  color: white;
+body.consulting-theme .section-header h2::after {
+  background-color: var(--accent-color);
 }
 
-.service-card:nth-child(2) .service-icon {
-  background-color: rgba(231, 76, 60, 0.1);
-  color: #e74c3c;
+/* Botones */
+body.consulting-theme .btn-primary {
+  background-color: var(--primary-color);
 }
 
-.service-card:nth-child(2):hover .service-icon {
-  background-color: #e74c3c;
-  color: white;
+body.consulting-theme .btn-primary:hover {
+  background-color: var(--accent-color);
 }
 
-.service-card:nth-child(3) .service-icon {
-  background-color: rgba(46, 204, 113, 0.1);
-  color: #2ecc71;
+body.consulting-theme .btn-secondary {
+  color: var(--primary-color);
+  border-color: var(--primary-color);
 }
 
-.service-card:nth-child(3):hover .service-icon {
-  background-color: #2ecc71;
+body.consulting-theme .btn-secondary:hover {
+  background-color: var(--primary-color);
+}
+
+/* Tarjetas de servicios */
+body.consulting-theme .service-icon {
+  color: var(--primary-color);
+  background-color: var(--light-color);
+}
+
+body.consulting-theme .service-card:hover .service-icon {
+  background-color: var(--primary-color);
   color: white;
 }
 
-.service-card:nth-child(4) .service-icon {
-  background-color: rgba(155, 89, 182, 0.1);
-  color: #9b59b6;
+/* Iconos específicos por área de especialización */
+body.consulting-theme .service-card:nth-child(1) .service-icon {
+  color: var(--primary-color); /* Consultoría Deportiva */
 }
 
-.service-card:nth-child(4):hover .service-icon {
-  background-color: #9b59b6;
-  color: white;
+body.consulting-theme .service-card:nth-child(2) .service-icon {
+  color: var(--innovation-color); /* Estrategia en eSports */
 }
 
-.service-card:nth-child(5) .service-icon {
-  background-color: rgba(241, 196, 15, 0.1);
-  color: #f1c40f;
+body.consulting-theme .service-card:nth-child(3) .service-icon {
+  color: var(--insight-color); /* Proyectos Energéticos */
 }
 
-.service-card:nth-child(5):hover .service-icon {
-  background-color: #f1c40f;
-  color: white;
+body.consulting-theme .service-card:nth-child(4) .service-icon {
+  color: var(--accent-color); /* Estrategia Empresarial */
 }
 
-.service-card:nth-child(6) .service-icon {
-  background-color: rgba(26, 188, 156, 0.1);
-  color: #1abc9c;
+body.consulting-theme .service-card:nth-child(5) .service-icon {
+  color: var(--gray-color); /* Gestión de Cambio */
 }
 
-.service-card:nth-child(6):hover .service-icon {
-  background-color: #1abc9c;
-  color: white;
+/* Metodología */
+body.consulting-theme .methodology-step {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: var(--box-shadow);
+  position: relative;
+  padding: 30px;
+  transition: var(--transition);
 }
 
-/* 
- * Estilos para tarjetas uniformes en la sección CASOS DE ÉXITO 
- * Añadido: Abril 2025
- */
-
- /* 
- * Estilos completos para tarjetas en cuadrícula 2x2 en la sección CASOS DE ÉXITO
- * Incluye ancho optimizado y mejor legibilidad con texto justificado
- */
-
-/* Contenedor principal de los casos de estudio */
-.case-studies-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2 columnas de igual ancho */
-  gap: 40px; /* Buena separación entre tarjetas */
-  max-width: 1400px; /* Contenedor más ancho para tarjetas más espaciosas */
-  margin: 0 auto;
-  padding: 0 30px; /* Mayor padding lateral */
+body.consulting-theme .methodology-step:hover {
+  transform: translateY(-10px);
 }
 
-/* Estilos para cada tarjeta individual */
-.case-study {
-  display: flex;
-  flex-direction: column;
+body.consulting-theme .step-number {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  opacity: 0.2;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+}
+
+body.consulting-theme .step-content h3 {
+  color: var(--primary-color);
+}
+
+/* Casos de estudio */
+body.consulting-theme .case-study {
   background-color: white;
   border-radius: 10px;
   overflow: hidden;
   box-shadow: var(--box-shadow);
-  height: 100%;
+  margin-bottom: 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+}
+
+body.consulting-theme .case-content h3 {
+  color: var(--primary-color);
+}
+
+body.consulting-theme .case-results .result span {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+/* Equipo */
+body.consulting-theme .team-member {
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: var(--box-shadow);
   transition: var(--transition);
 }
 
+body.consulting-theme .team-member:hover {
+  transform: translateY(-10px);
+}
+
+body.consulting-theme .member-position {
+  color: var(--accent-color);
+}
+
+/* CTA */
+body.consulting-theme .cta {
+  background: linear-gradient(rgba(52, 152, 219, 0.85), rgba(41, 128, 185, 0.85)), 
+              url('/api/placeholder/1200/400') no-repeat center center/cover;
+}
+
+/* Footer */
+body.consulting-theme footer .footer-links h3::after,
+body.consulting-theme footer .footer-companies h3::after,
+body.consulting-theme footer .footer-newsletter h3::after {
+  background-color: var(--accent-color);
+}
+
+body.consulting-theme footer .footer-newsletter button {
+  background-color: var(--primary-color);
+}
+
+body.consulting-theme footer .footer-newsletter button:hover {
+  background-color: var(--accent-color);
+}
+
+/* Secciones con fondos alternados */
+body.consulting-theme .company-details, 
+body.consulting-theme .methodology,
+body.consulting-theme .team {
+  background-color: white;
+}
+
+body.consulting-theme .services, 
+body.consulting-theme .case-studies {
+  background-color: var(--light-color);
+}
+
+body.consulting-theme .hero {
+  background: linear-gradient(rgba(52, 152, 219, 0.8), rgba(41, 128, 185, 0.8)), 
+              url('') no-repeat center center/cover;
+}
+
+/* Estilo específico para el hero de consulting con la nueva imagen */
+#consulting-hero {
+background: url('/asset/image/heroes/consulting-hero.jpg') no-repeat center center/cover;
+background-attachment: fixed;
+position: relative;
+overflow: hidden;
+  }
+    
+#consulting-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at center, transparent 30%, rgba(0, 0, 0, 0.2) 100%);
+}
+
+#consulting-hero .hero-content {
+  position: relative;
+  z-index: 2;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Diseño moderno para la sección de Áreas de Especialización */
+
+.container {
+max-width: 1280px;
+margin: 0 auto;
+padding: 0 20px;
+}
+
+.services {
+padding: 100px 0;
+background-color: #f8f9fa;
+position: relative;
+overflow: hidden;
+}
+
+/* Elemento decorativo de fondo */
+.services::before {
+content: "";
+position: absolute;
+top: -50px;
+right: -50px;
+width: 300px;
+height: 300px;
+border-radius: 50%;
+background: linear-gradient(45deg, rgba(52, 152, 219, 0.1), rgba(155, 89, 182, 0.1));
+z-index: 0;
+}
+
+.section-header {
+text-align: center;
+margin-bottom: 70px;
+position: relative;
+z-index: 1;
+}
+
+.section-header h2 {
+font-size: 2.5rem;
+font-weight: 700;
+color: #2c3e50;
+margin-bottom: 20px;
+position: relative;
+display: inline-block;
+}
+
+.section-header h2::after {
+content: "";
+position: absolute;
+bottom: -15px;
+left: 50%;
+transform: translateX(-50%);
+width: 80px;
+height: 3px;
+background: linear-gradient(90deg, #3498db, #9b59b6);
+border-radius: 3px;
+}
+
+.section-header p {
+font-size: 1.1rem;
+color: #7f8c8d;
+max-width: 600px;
+margin: 0 auto;
+}
+
+.services-grid {
+display: grid;
+grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+gap: 30px;
+position: relative;
+z-index: 1;
+}
+
+.service-card {
+background: white;
+border-radius: 12px;
+box-shadow: 0 5px 30px rgba(0, 0, 0, 0.05);
+padding: 40px 30px;
+transition: all 0.4s ease;
+position: relative;
+overflow: hidden;
+height: 100%;
+display: flex;
+flex-direction: column;
+}
+
+.service-card::before {
+content: "";
+position: absolute;
+top: 0;
+left: 0;
+width: 5px;
+height: 0;
+background: linear-gradient(to bottom, #3498db, #9b59b6);
+transition: height 0.5s ease;
+}
+
+.service-card:hover {
+transform: translateY(-15px);
+box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.service-card:hover::before {
+height: 100%;
+}
+
+.service-icon {
+width: 80px;
+height: 80px;
+border-radius: 50%;
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 32px;
+margin-bottom: 25px;
+background-color: #f1f7ff;
+color: #3498db;
+transition: all 0.4s ease;
+}
+
+.service-card:hover .service-icon {
+background-color: #3498db;
+color: white;
+transform: scale(1.1);
+}
+
+.service-card h3 {
+font-size: 1.5rem;
+font-weight: 600;
+color: #2c3e50;
+margin-bottom: 20px;
+transition: all 0.3s ease;
+}
+
+.service-card:hover h3 {
+transform: translateX(10px);
+}
+
+.service-card p {
+color: #7f8c8d;
+font-size: 1rem;
+line-height: 1.7;
+flex-grow: 1;
+}
+
+/* Estilos específicos para cada tarjeta */
+.service-card:nth-child(1) .service-icon {
+background-color: rgba(52, 152, 219, 0.1);
+color: #3498db;
+}
+
+.service-card:nth-child(1):hover .service-icon {
+background-color: #3498db;
+color: white;
+}
+
+.service-card:nth-child(2) .service-icon {
+background-color: rgba(231, 76, 60, 0.1);
+color: #e74c3c;
+}
+
+.service-card:nth-child(2):hover .service-icon {
+background-color: #e74c3c;
+color: white;
+}
+
+.service-card:nth-child(3) .service-icon {
+background-color: rgba(46, 204, 113, 0.1);
+color: #2ecc71;
+}
+
+.service-card:nth-child(3):hover .service-icon {
+background-color: #2ecc71;
+color: white;
+}
+
+.service-card:nth-child(4) .service-icon {
+background-color: rgba(155, 89, 182, 0.1);
+color: #9b59b6;
+}
+
+.service-card:nth-child(4):hover .service-icon {
+background-color: #9b59b6;
+color: white;
+}
+
+.service-card:nth-child(5) .service-icon {
+background-color: rgba(241, 196, 15, 0.1);
+color: #f1c40f;
+}
+
+.service-card:nth-child(5):hover .service-icon {
+background-color: #f1c40f;
+color: white;
+}
+
+.service-card:nth-child(6) .service-icon {
+background-color: rgba(26, 188, 156, 0.1);
+color: #1abc9c;
+}
+
+.service-card:nth-child(6):hover .service-icon {
+background-color: #1abc9c;
+color: white;
+}
+
+/* 
+* Estilos para tarjetas uniformes en la sección CASOS DE ÉXITO 
+* Añadido: Abril 2025
+*/
+
+/* 
+* Estilos completos para tarjetas en cuadrícula 2x2 en la sección CASOS DE ÉXITO
+* Incluye ancho optimizado y mejor legibilidad con texto justificado
+*/
+
+/* Contenedor principal de los casos de estudio */
+.case-studies-grid {
+display: grid;
+grid-template-columns: repeat(2, 1fr); /* 2 columnas de igual ancho */
+gap: 40px; /* Buena separación entre tarjetas */
+max-width: 1400px; /* Contenedor más ancho para tarjetas más espaciosas */
+margin: 0 auto;
+padding: 0 30px; /* Mayor padding lateral */
+}
+
+/* Estilos para cada tarjeta individual */
+.case-study {
+display: flex;
+flex-direction: column;
+background-color: white;
+border-radius: 10px;
+overflow: hidden;
+box-shadow: var(--box-shadow);
+height: 100%;
+transition: var(--transition);
+}
+
 .case-study:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+transform: translateY(-8px);
+box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
 }
 
 /* Contenedor de imagen con altura fija */
 .case-image {
-  position: relative;
-  width: 100%;
-  height: 240px; /* Altura optimizada */
-  overflow: hidden;
+position: relative;
+width: 100%;
+height: 240px; /* Altura optimizada */
+overflow: hidden;
 }
 
 .case-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* Mantiene la proporción de aspecto cubriendo el contenedor */
-  object-position: center; /* Centra la imagen */
-  transition: var(--transition);
+width: 100%;
+height: 100%;
+object-fit: cover; /* Mantiene la proporción de aspecto cubriendo el contenedor */
+object-position: center; /* Centra la imagen */
+transition: var(--transition);
 }
 
 .case-study:hover .case-image img {
-  transform: scale(1.05);
+transform: scale(1.05);
 }
 
 /* Contenido de la tarjeta */
 .case-content {
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-  padding: 25px 30px; /* Más espacio horizontal */
+flex-grow: 1;
+display: flex;
+flex-direction: column;
+padding: 25px 30px; /* Más espacio horizontal */
 }
 
 .case-content h3 {
-  color: var(--primary-color);
-  margin-bottom: 18px;
-  font-size: 1.3rem; /* Tamaño de título optimizado */
-  line-height: 1.3;
-  font-weight: 600;
+color: var(--primary-color);
+margin-bottom: 18px;
+font-size: 1.3rem; /* Tamaño de título optimizado */
+line-height: 1.3;
+font-weight: 600;
 }
 
 .case-content p {
-  color: var(--text-color); /* Color más oscuro para mejor contraste */
-  margin-bottom: 20px;
-  flex-grow: 1;
-  font-size: 0.98rem; /* Tamaño de fuente optimizado */
-  line-height: 1.6; /* Mejor interlineado */
-  text-align: justify; /* Texto justificado */
-  /* Limitar a 5 líneas de texto y añadir elipsis */
-  display: -webkit-box;
-  -webkit-line-clamp: 5;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  text-overflow: ellipsis;
+color: var(--text-color); /* Color más oscuro para mejor contraste */
+margin-bottom: 20px;
+flex-grow: 1;
+font-size: 0.98rem; /* Tamaño de fuente optimizado */
+line-height: 1.6; /* Mejor interlineado */
+text-align: justify; /* Texto justificado */
+/* Limitar a 5 líneas de texto y añadir elipsis */
+display: -webkit-box;
+-webkit-line-clamp: 5;
+line-clamp: 5; /* Propiedad estándar para compatibilidad */
+-webkit-box-orient: vertical;
+overflow: hidden;
+text-overflow: ellipsis;
 }
 
 /* Botón de contacto */
 .case-contact-btn {
-  align-self: flex-start;
-  margin-top: 20px;
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: var(--primary-color);
-  color: white;
-  border-radius: 5px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: var(--transition);
-  font-size: 14px;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
+align-self: flex-start;
+margin-top: 20px;
+display: inline-block;
+padding: 10px 20px;
+background-color: var(--primary-color);
+color: white;
+border-radius: 5px;
+text-decoration: none;
+font-weight: 600;
+transition: var(--transition);
+font-size: 14px;
+text-transform: uppercase;
+letter-spacing: 0.5px;
 }
 
 .case-contact-btn:hover {
-  background-color: var(--accent-color);
-  transform: translateY(-3px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+background-color: var(--accent-color);
+transform: translateY(-3px);
+box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 /* Media queries para responsividad */
 @media (max-width: 1200px) {
-  .case-studies-grid {
-    max-width: 90%;
-    gap: 30px;
-  }
-  
-  .case-image {
-    height: 220px;
-  }
-  
-  .case-content {
-    padding: 20px 25px;
-  }
+.case-studies-grid {
+  max-width: 90%;
+  gap: 30px;
+}
+
+.case-image {
+  height: 220px;
+}
+
+.case-content {
+  padding: 20px 25px;
+}
 }
 
 @media (max-width: 992px) {
-  .case-studies-grid {
-    gap: 25px;
-  }
-  
-  .case-content p {
-    -webkit-line-clamp: 4; /* Reducir a 4 líneas en pantallas medianas */
-    font-size: 0.95rem;
-  }
-  
-  .case-content h3 {
-    font-size: 1.2rem;
-  }
+.case-studies-grid {
+  gap: 25px;
+}
+
+.case-content p {
+  -webkit-line-clamp: 4; /* Reducir a 4 líneas en pantallas medianas */
+  line-clamp: 4; /* Propiedad estándar */
+  font-size: 0.95rem;
+}
+
+.case-content h3 {
+  font-size: 1.2rem;
+}
 }
 
 @media (max-width: 768px) {
-  .case-studies-grid {
-    grid-template-columns: 1fr; /* Cambiar a 1 columna en pantallas pequeñas */
-    max-width: 600px;
-  }
-  
-  .case-image {
-    height: 230px; /* Altura ligeramente mayor para pantallas pequeñas */
-  }
-  
-  .case-content p {
-    -webkit-line-clamp: 4; /* Mantener 4 líneas en móvil para más contenido */
-  }
+.case-studies-grid {
+  grid-template-columns: 1fr; /* Cambiar a 1 columna en pantallas pequeñas */
+  max-width: 600px;
+}
+
+.case-image {
+  height: 230px; /* Altura ligeramente mayor para pantallas pequeñas */
+}
+
+.case-content p {
+  -webkit-line-clamp: 4; /* Mantener 4 líneas en móvil para más contenido */
+  line-clamp: 4; /* Propiedad estándar */
+}
 }
 
 @media (max-width: 576px) {
-  .case-studies-grid {
-    padding: 0 20px;
-  }
-  
-  .case-image {
-    height: 200px;
-  }
-  
-  .case-content {
-    padding: 20px;
-  }
-  
-  .case-content p {
-    -webkit-line-clamp: 5;
-    text-align: left; /* Cambiar a alineación izquierda en pantallas muy pequeñas */
-  }
+.case-studies-grid {
+  padding: 0 20px;
 }
 
-  /* Media queries */
-  @media (max-width: 768px) {
-    body.consulting-theme .case-study {
-      grid-template-columns: 1fr;
-    }
-  }
-
-  /* Responsive */
-@media (max-width: 1200px) {
-  .services-grid {
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  }
-  
-  .service-card {
-    padding: 30px 25px;
-  }
+.case-image {
+  height: 200px;
 }
 
+.case-content {
+  padding: 20px;
+}
+
+.case-content p {
+  -webkit-line-clamp: 5;
+  line-clamp: 5; /* Propiedad estándar */
+  text-align: left; /* Cambiar a alineación izquierda en pantallas muy pequeñas */
+}
+}
+
+/* Media queries */
 @media (max-width: 768px) {
-  .services {
-    padding: 70px 0;
-  }
-  
-  .section-header h2 {
-    font-size: 2rem;
-  }
-  
-  .services-grid {
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 25px;
-  }
-}
-
-@media (max-width: 576px) {
-  .services-grid {
+  body.consulting-theme .case-study {
     grid-template-columns: 1fr;
-    max-width: 400px;
-    margin: 0 auto;
   }
-  
-  .service-card {
-    text-align: center;
-  }
-  
-  .service-icon {
-    margin: 0 auto 20px;
-  }
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+.services-grid {
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+.service-card {
+  padding: 30px 25px;
+}
+}
+
+@media (max-width: 768px) {
+.services {
+  padding: 70px 0;
+}
+
+.section-header h2 {
+  font-size: 2rem;
+}
+
+.services-grid {
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 25px;
+}
+}
+
+@media (max-width: 576px) {
+.services-grid {
+  grid-template-columns: 1fr;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.service-card {
+  text-align: center;
+}
+
+.service-icon {
+  margin: 0 auto 20px;
+}
 }
