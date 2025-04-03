@@ -1,32 +1,47 @@
 // init-distortion.js
 document.addEventListener('DOMContentLoaded', () => {
-    // Obtener la ruta de la imagen actual del hero
+    // Obtener el contenedor de la distorsión
+    const container = document.getElementById('grid-distortion-container');
+    if (!container) return;
+    
+    // Obtener la URL de la imagen de fondo del hero
     const heroElement = document.querySelector('.hero-sport');
+    if (!heroElement) return;
+    
+    // Extraer la URL de la imagen del estilo computado
     const computedStyle = window.getComputedStyle(heroElement);
     const backgroundImage = computedStyle.backgroundImage;
     
-    // Extraer la URL de la imagen del estilo CSS
+    // Extraer la URL de la imagen del formato 'url("ruta-de-la-imagen")'
     let imageSrc = '';
-    if (backgroundImage !== 'none') {
-      // Extraer la ruta de la imagen del formato 'url("ruta-de-la-imagen")'
-      imageSrc = backgroundImage.slice(4, -1).replace(/"/g, '');
-    } else {
-      // Si no hay imagen de fondo, usar una imagen por defecto
-      imageSrc = 'img/hero-bg.jpg'; // Ajusta esta ruta a tu imagen por defecto
+    if (backgroundImage && backgroundImage !== 'none') {
+      // Extraer la URL entre url() y eliminar comillas
+      const matches = backgroundImage.match(/url\(['"]?(.*?)['"]?\)/);
+      if (matches && matches[1]) {
+        imageSrc = matches[1];
+      }
     }
     
+    // Si no se pudo extraer una imagen, usar una por defecto
+    if (!imageSrc) {
+      imageSrc = 'asset/image/imagen_jumbotron.jpg';
+      console.warn('No se pudo extraer la imagen de fondo. Usando imagen por defecto.');
+    }
+    
+    console.log('Inicializando GridDistortion con imagen:', imageSrc);
+    
     // Inicializar el efecto Grid Distortion
-    const container = document.getElementById('grid-distortion-container');
-    
-    const gridDistortion = new GridDistortion({
-      container: container,
-      imageSrc: imageSrc,
-      grid: 15,
-      mouse: 0.1,
-      strength: 0.15,
-      relaxation: 0.9
-    });
-    
-    // Almacenar la instancia para poder limpiarla si es necesario
-    window.gridDistortion = gridDistortion;
+    try {
+      window.gridDistortion = new GridDistortion({
+        container: container,
+        imageSrc: imageSrc,
+        grid: 15,
+        mouse: 0.1,
+        strength: 0.15,
+        relaxation: 0.9
+      });
+      console.log('GridDistortion inicializado correctamente');
+    } catch (error) {
+      console.error('Error al inicializar GridDistortion:', error);
+    }
   });
