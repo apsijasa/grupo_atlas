@@ -54,34 +54,34 @@
 
 /* Hero específico - Home */
 .hero-home {
-    background: url('') no-repeat center center/cover;
+    background: url('../asset/image/home-hero.jpg') no-repeat center center/cover;
 }
 
 /* Hero específico - Atlas Sport */
 .hero-sport {
-    background: url('asset/image/sport-hero.jpg') no-repeat center center/cover;
+    background: url('../asset/image/sport-hero.jpg') no-repeat center center/cover;
     background-attachment: fixed;
 }
 
 /* Hero específico - Constructora */
 .hero-constructora {
-    background: url('asset/image/hero-constructora.jpg') no-repeat center center/cover;
+    background: url('../asset/image/hero-constructora.jpg') no-repeat center center/cover;
 }
 
 /* Hero específico - Consulting */
 .hero-consulting {
-    background: url('asset/image/consulting-hero.jpg') no-repeat center center/cover;
+    background: url('../asset/image/consulting-hero.jpg') no-repeat center center/cover;
     background-attachment: fixed;
 }
 
-/* Hero específico - Web Services */
+/* Hero específico - Web Services */    
 .hero-web {
-    background: url('asset/image/web-services-hero.jpg') no-repeat center center/cover;
+    background: url('') no-repeat center center/cover;
 }
 
 /* Hero específico - Web Services */
 .hero-contacto {
-    background: url('/asset/image/contacto-hero.jpg') no-repeat center center/cover;
+    background: url('../asset/image/contacto-hero.jpg') no-repeat center center/cover;
 }
 
 /* Estilos especiales para la superposición de LetterGlitch en Web Services */
