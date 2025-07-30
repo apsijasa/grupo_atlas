@@ -1,403 +1,415 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Atlas Consulting - Consultoría Estratégica</title>
+    <meta name="description" content="Atlas Consulting - Consultoría estratégica especializada en deportes, esports, proyectos energéticos y sectores de alto impacto.">
+    <meta name="keywords" content="atlas consulting, consultoría estratégica, esports, consultoría deportiva, proyectos energéticos, estrategia empresarial">
+    <meta name="author" content="Grupo Atlas">
+    
+    <title>Atlas Consulting - Consultoría Estratégica Especializada | Grupo Atlas</title>
+    
+    <!-- Favicon -->
     <link rel="icon" href="asset/image/favicon-16x16.png" type="image/x-icon">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/consulting.css">
-    <link rel="stylesheet" href="css/heroes.css">
-    <link rel="stylesheet" href="css/whatsapp-button.css">
-    <link rel="stylesheet" href="css/waves.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Aptos:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Atlas Consulting - Consultoría Estratégica">
+    <meta property="og:description" content="Estrategias que transforman ideas en resultados. Consultoría especializada en sectores estratégicos.">
+    <meta property="og:image" content="https://grupoatlas.cl/asset/image/consulting-hero.jpg">
+    <meta property="og:url" content="https://grupoatlas.cl/consulting.html">
 </head>
 
 <body>
-    <header>
-        <nav>
-            <div class="logo">
-                <svg width="30" height="30" viewBox="0 0 250 250" xmlns="http://www.w3.org/2000/svg" class="logo-svg">
-                    <path d="M125 10 L10 240 L240 240 Z" fill="#0c2340" />
-                    <path d="M125 70 L55 200 L195 200 Z" fill="#2c6674" />
-                </svg>
-                <h1>GRUPO ATLAS</h1>
-            </div>
-            <div class="menu-toggle">
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-mountain logo-icon"></i>
+                GRUPO ATLAS
+            </a>
+            
+            <button class="nav-toggle" aria-label="Toggle navigation">
                 <i class="fas fa-bars"></i>
-            </div>
+            </button>
+            
             <ul class="nav-menu">
-                <li><a href="index.html" class="active">Inicio</a></li>
+                <li><a href="index.html" class="nav-link">Inicio</a></li>
                 <li class="dropdown">
-                    <a href="#empresas" class="dropdown-toggle">Servicios</a>
+                    <a href="#" class="nav-link dropdown-toggle">Servicios</a>
                     <div class="dropdown-content">
-                        <a href="#">RenovaCare</a>
-                        <a href="atlas_sport.html">Atlas Sport</a>
-                        <a href="constructora.html">Constructora Atlas</a>
-                        <a href="consulting.html">Atlas Consulting</a>
-                        <a href="web_services.html">Servicios Web</a>
+                        <a href="constructora.html" class="dropdown-item">Constructora Atlas</a>
+                        <a href="consulting.html" class="dropdown-item">Atlas Consulting</a>
+                        <a href="web_services.html" class="dropdown-item">Servicios Web</a>
                     </div>
                 </li>
-                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="consulting.html" class="nav-link active">Consulting</a></li>
+                <li><a href="contacto.html" class="nav-link">Contacto</a></li>
+            </ul>
         </nav>
     </header>
 
-    <section class="hero hero-consulting">
-        <div class="hero-content">
-            <h1>Atlas Consulting</h1>
-            <p>Estrategias que transforman ideas en resultados</p>
-        </div>
-    </section>
-
-    <section class="company-details">
-        <div class="section-header">
-            <h2>Consultoría Estratégica</h2>
-            <p>Soluciones a medida para desafíos complejos</p>
-        </div>
-
-        <div class="company-description">
-            <div class="description-content">
-                <div class="description-image">
-                    <img src="asset/image/consulting web.jpg" alt="Atlas Consulting Services">
-                </div>
-                <div class="description-text">
-                    <h3>Nuestra visión</h3>
-                    <p>En Atlas Consulting nos especializamos en brindar servicios de consultoría en sectores
-                        estratégicos como deportes, esports, energía y tecnología. Nuestro equipo multidisciplinario de
-                        consultores combina experiencia práctica, conocimiento técnico y visión innovadora para ofrecer
-                        soluciones que generan valor real y sostenible.</p>
-                    <p>Entendemos los desafíos específicos de cada industria y trabajamos estrechamente con nuestros
-                        clientes para desarrollar estrategias personalizadas que impulsan el crecimiento, la eficiencia
-                        y la competitividad en un entorno empresarial en constante evolución.</p>
-                    <a href="index.html#contact" class="btn-primary">Agendar una consulta</a>
-                </div>
+    <!-- Hero Section -->
+    <section class="hero" style="background: linear-gradient(135deg, var(--consulting-accent), var(--primary-color));">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Atlas Consulting</h1>
+                <p>Estrategias que transforman ideas en resultados tangibles y sostenibles para tu organización</p>
+                <a href="#especializacion" class="btn btn-primary btn-lg">Conocer servicios</a>
             </div>
         </div>
     </section>
 
-    <section class="services">
+    <!-- Descripción de la empresa -->
+    <section class="section">
         <div class="container">
             <div class="section-header">
-                <h2>Áreas de Especialización</h2>
-                <p>Consultoría en sectores estratégicos</p>
+                <h2 class="section-title">Consultoría Estratégica</h2>
+                <p class="section-subtitle">Soluciones a medida para desafíos complejos</p>
             </div>
 
-            <div class="services-grid">
-                <div class="service-card">
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="asset/image/consulting web.jpg" alt="Atlas Consulting - Servicios Estratégicos" style="border-radius: var(--border-radius-lg); box-shadow: var(--box-shadow);">
+                </div>
+                <div class="about-text">
+                    <h3>Nuestra visión</h3>
+                    <p>En Atlas Consulting nos especializamos en brindar servicios de consultoría en sectores estratégicos como deportes, esports, energía y tecnología. Nuestro equipo multidisciplinario de consultores combina experiencia práctica, conocimiento técnico y visión innovadora para ofrecer soluciones que generan valor real y sostenible.</p>
+                    
+                    <p>Entendemos los desafíos específicos de cada industria y trabajamos estrechamente con nuestros clientes para desarrollar estrategias personalizadas que impulsan el crecimiento, la eficiencia y la competitividad en un entorno empresarial en constante evolución.</p>
+                    
+                    <div style="margin-top: var(--space-lg);">
+                        <a href="contacto.html" class="btn btn-primary">Agendar una consulta</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Áreas de Especialización -->
+    <section id="especializacion" class="section bg-light">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Áreas de Especialización</h2>
+                <p class="section-subtitle">Consultoría en sectores estratégicos de alto impacto</p>
+            </div>
+
+            <div class="grid grid-auto">
+                <div class="service-card service-consulting">
                     <div class="service-icon">
                         <i class="fas fa-medal"></i>
                     </div>
                     <h3>Consultoría Deportiva</h3>
-                    <p>Asesoramiento integral para federaciones, clubes y organizaciones deportivas en gestión
-                        operativa, desarrollo de talento, infraestructura y estrategias de crecimiento.</p>
+                    <p>Asesoramiento integral para federaciones, clubes y organizaciones deportivas en gestión operativa, desarrollo de talento, infraestructura y estrategias de crecimiento sostenible.</p>
                 </div>
 
-                <div class="service-card">
+                <div class="service-card service-consulting">
                     <div class="service-icon">
                         <i class="fas fa-gamepad"></i>
                     </div>
                     <h3>Estrategia en eSports</h3>
-                    <p>Consultoría especializada para equipos, patrocinadores y organizadores de eventos en el creciente
-                        sector de los deportes electrónicos, abarcando gestión, marketing y desarrollo de audiencia.</p>
+                    <p>Consultoría especializada para equipos, patrocinadores y organizadores de eventos en el creciente sector de los deportes electrónicos, abarcando gestión, marketing y desarrollo de audiencia.</p>
                 </div>
 
-                <div class="service-card">
+                <div class="service-card service-consulting">
                     <div class="service-icon">
                         <i class="fas fa-solar-panel"></i>
                     </div>
                     <h3>Proyectos Energéticos</h3>
-                    <p>Asesoramiento en planificación, desarrollo e implementación de proyectos energéticos sostenibles,
-                        incluyendo estudios de viabilidad, acceso a financiamiento y optimización de recursos.</p>
+                    <p>Asesoramiento en planificación, desarrollo e implementación de proyectos energéticos sostenibles, incluyendo estudios de viabilidad, acceso a financiamiento y optimización de recursos.</p>
                 </div>
 
-                <div class="service-card">
+                <div class="service-card service-consulting">
                     <div class="service-icon">
                         <i class="fas fa-chart-line"></i>
                     </div>
                     <h3>Estrategia Empresarial</h3>
-                    <p>Desarrollo de planes estratégicos, análisis de mercado, identificación de oportunidades de
-                        crecimiento y optimización de procesos para mejorar la competitividad y rentabilidad.</p>
+                    <p>Desarrollo de planes estratégicos, análisis de mercado, identificación de oportunidades de crecimiento y optimización de procesos para mejorar la competitividad y rentabilidad.</p>
                 </div>
 
-                <div class="service-card">
+                <div class="service-card service-consulting">
                     <div class="service-icon">
                         <i class="fas fa-users"></i>
                     </div>
                     <h3>Gestión de Cambio</h3>
-                    <p>Acompañamiento en procesos de transformación organizacional, fusiones, adquisiciones y
-                        reestructuraciones, con enfoque en la adaptación cultural y la gestión del capital humano.</p>
+                    <p>Acompañamiento en procesos de transformación organizacional, fusiones, adquisiciones y reestructuraciones, con enfoque en la adaptación cultural y la gestión del capital humano.</p>
                 </div>
 
-                <div class="service-card">
+                <div class="service-card service-consulting">
                     <div class="service-icon">
                         <i class="fas fa-lightbulb"></i>
                     </div>
                     <h3>Innovación y Tecnología</h3>
-                    <p>Asesoría en implementación de soluciones tecnológicas, transformación digital e innovación
-                        disruptiva para potenciar la competitividad y eficiencia operacional.</p>
+                    <p>Asesoría en implementación de soluciones tecnológicas, transformación digital e innovación disruptiva para potenciar la competitividad y eficiencia operacional.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="methodology">
-        <div class="section-header">
-            <h2>Nuestra Metodología</h2>
-            <p>Un enfoque integral para resultados excepcionales</p>
-        </div>
-
-        <div class="methodology-steps">
-            <div class="methodology-step">
-                <div class="step-number">01</div>
-                <div class="step-content">
-                    <h3>Diagnóstico</h3>
-                    <p>Análisis exhaustivo de la situación actual, identificación de fortalezas, debilidades,
-                        oportunidades y amenazas mediante herramientas analíticas avanzadas.</p>
-                </div>
-            </div>
-            <div class="methodology-step">
-                <div class="step-number">02</div>
-                <div class="step-content">
-                    <h3>Planificación</h3>
-                    <p>Desarrollo de estrategias personalizadas y planes de acción detallados con objetivos claros,
-                        indicadores de éxito y cronogramas realistas.</p>
-                </div>
-            </div>
-            <div class="methodology-step">
-                <div class="step-number">03</div>
-                <div class="step-content">
-                    <h3>Implementación</h3>
-                    <p>Ejecución de las soluciones diseñadas con acompañamiento constante, transferencia de conocimiento
-                        y adaptación ágil a situaciones emergentes.</p>
-                </div>
-            </div>
-            <div class="methodology-step">
-                <div class="step-number">04</div>
-                <div class="step-content">
-                    <h3>Seguimiento</h3>
-                    <p>Monitoreo continuo de resultados, medición de indicadores clave y ajustes estratégicos para
-                        garantizar el cumplimiento de los objetivos establecidos.</p>
-                </div>
-            </div>
-            <div class="methodology-step">
-                <div class="step-number">05</div>
-                <div class="step-content">
-                    <h3>Evaluación</h3>
-                    <p>Análisis de impacto, identificación de lecciones aprendidas y recomendaciones para la mejora
-                        continua y la sostenibilidad de los resultados.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="case-studies">
-        <div class="section-header">
-            <h2>Casos de Éxito</h2>
-            <p>Transformación e impacto en diferentes sectores</p>
-        </div>
-
-        <div class="case-studies-grid">
-            <div class="case-study">
-                <div class="case-image">
-                    <img src="asset/image/EVA.jpg" alt="Desarrollo de E-Sport en Chile">
-                </div>
-                <div class="case-content">
-                    <h3>Desarrollo de E-Sport en Chile</h3>
-                    <p>Desarrollamos un plan estratégico integral para la implementación de proyectos relacionados con
-                        E-Sports en Chile y Sudamérica. Los E-Sports son una de las disciplinas deportivas con mayor
-                        crecimiento a nivel mundial, destacando tanto en participación como en audiencia. Además,
-                        ofrecen premios monetarios muy atractivos para jugadores que actualmente se desempeñan como
-                        profesionales. Nuestras consultorías están orientadas a comprender profundamente
-                        este sector, proyectar tendencias futuras, evaluar costos de implementación y definir el tipo de
-                        infraestructura necesaria para albergar eventos exitosos.
-                    </p>
-                    <a href="contacto.html" class="case-contact-btn">Contáctanos</a>
-                </div>
+    <!-- Metodología -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Nuestra Metodología</h2>
+                <p class="section-subtitle">Un enfoque integral para resultados excepcionales</p>
             </div>
 
-            <div class="case-study">
-                <div class="case-image">
-                    <img src="asset/image/sport-pirque.jpg" alt="Proyecto Ciudad Deportiva Sport Pirque"
-                        onerror="this.src='/api/placeholder/600/400'">
+            <div class="grid grid-auto-sm">
+                <div class="card hover-lift">
+                    <div class="card-body text-center">
+                        <div class="value-icon" style="background-color: var(--consulting-accent); margin-bottom: var(--space-lg);">
+                            <span style="font-size: var(--font-size-2xl); font-weight: var(--font-weight-bold);">01</span>
+                        </div>
+                        <h3>Diagnóstico</h3>
+                        <p>Análisis exhaustivo de la situación actual, identificación de fortalezas, debilidades, oportunidades y amenazas mediante herramientas analíticas avanzadas.</p>
+                    </div>
                 </div>
-                <div class="case-content">
-                    <h3>Proyecto Ciudad Deportiva Sport Pirque</h3>
-                    <p>Sport Pirque es un proyecto privado que busca desarrollar la primera ciudad deportiva en la zona
-                        sur de la Región Metropolitana. Grupo Atlas trabajó en la planificación e implementación del
-                        proyecto, realizando estudios exhaustivos para seleccionar las disciplinas deportivas más
-                        atractivas y viables comercialmente, considerando no solo el aspecto económico, sino también
-                        factores arquitectónicos, regulaciones municipales y eficiencia energética del recinto.</p>
-                    <a href="contacto.html" class="case-contact-btn">Contáctanos</a>
-                </div>
-            </div>
 
-            <div class="case-study">
-                <div class="case-image">
-                    <img src="asset/image/bomba calor.jpg" alt="Eficiencia energetica en asociación con ENELX">
+                <div class="card hover-lift">
+                    <div class="card-body text-center">
+                        <div class="value-icon" style="background-color: var(--consulting-accent); margin-bottom: var(--space-lg);">
+                            <span style="font-size: var(--font-size-2xl); font-weight: var(--font-weight-bold);">02</span>
+                        </div>
+                        <h3>Planificación</h3>
+                        <p>Desarrollo de estrategias personalizadas y planes de acción detallados con objetivos claros, indicadores de éxito y cronogramas realistas.</p>
+                    </div>
                 </div>
-                <div class="case-content">
-                    <h3>Eficiencia energética con ENELX</h3>
-                    <p>Debido a la pandemia, la piscina de la Corporación de Deportes de Ñuñoa presentó diversas
-                        filtraciones y problemas relacionados con la temperatura del agua. Grupo Atlas brindó asesoría
-                        especializada a la Corporación, identificando la solución óptima para reparar la piscina y
-                        resolver los problemas térmicos, tanto del agua para uso recreativo como sanitario. En
-                        colaboración con ENEL X, desarrollamos un proyecto integral de eficiencia energética que ha
-                        generado importantes ahorros en el consumo hídrico y energético del recinto.</p>
-                    <a href="contacto.html" class="case-contact-btn">Contáctanos</a>
-                </div>
-            </div>
 
-            <div class="case-study">
-                <div class="case-image">
-                    <img src="asset/image/piscina_barnechea.jpg" alt="Asesoria en implementación Piscina Municipal">
+                <div class="card hover-lift">
+                    <div class="card-body text-center">
+                        <div class="value-icon" style="background-color: var(--consulting-accent); margin-bottom: var(--space-lg);">
+                            <span style="font-size: var(--font-size-2xl); font-weight: var(--font-weight-bold);">03</span>
+                        </div>
+                        <h3>Implementación</h3>
+                        <p>Ejecución de las soluciones diseñadas con acompañamiento constante, transferencia de conocimiento y adaptación ágil a situaciones emergentes.</p>
+                    </div>
                 </div>
-                <div class="case-content">
-                    <h3>Asesoría Piscina Municipal Lo Barnechea</h3>
-                    <p>
-                        Este recinto fue inaugurado en enero de 2024. Grupo Atlas participó activamente en el desarrollo
-                        e implementación para su apertura a la comunidad, trabajando en conjunto con el municipio.
-                        Nuestra gestión incluyó la definición de perfiles profesionales requeridos para su operación,
-                        determinación de los servicios ofrecidos, análisis de costos asociados al mantenimiento,
-                        capacitación del personal técnico, así como la elaboración de manuales específicos para el uso
-                        adecuado y mantenimiento óptimo de la piscina y sus instalaciones.</p>
-                    <a href="contacto.html" class="case-contact-btn">Contáctanos</a>
+
+                <div class="card hover-lift">
+                    <div class="card-body text-center">
+                        <div class="value-icon" style="background-color: var(--consulting-accent); margin-bottom: var(--space-lg);">
+                            <span style="font-size: var(--font-size-2xl); font-weight: var(--font-weight-bold);">04</span>
+                        </div>
+                        <h3>Seguimiento</h3>
+                        <p>Monitoreo continuo de resultados, medición de indicadores clave y ajustes estratégicos para garantizar el cumplimiento de los objetivos establecidos.</p>
+                    </div>
+                </div>
+
+                <div class="card hover-lift">
+                    <div class="card-body text-center">
+                        <div class="value-icon" style="background-color: var(--consulting-accent); margin-bottom: var(--space-lg);">
+                            <span style="font-size: var(--font-size-2xl); font-weight: var(--font-weight-bold);">05</span>
+                        </div>
+                        <h3>Evaluación</h3>
+                        <p>Análisis de impacto, identificación de lecciones aprendidas y recomendaciones para la mejora continua y la sostenibilidad de los resultados.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- <section class="team">
-        <div class="section-header">
-            <h2>Nuestro Equipo</h2>
-            <p>Experiencia multidisciplinaria al servicio de tu organización</p>
-        </div>
-
-        <div class="team-grid">
-            <div class="team-member">
-                <div class="member-image">
-                    <img src="/api/placeholder/400/400" alt="Consultor Senior">
-                </div>
-                <div class="member-info">
-                    <h3>Ignacio Vidal</h3>
-                    <p class="member-position">Director de Consultoría Deportiva</p>
-                    <p class="member-bio">Más de 15 años de experiencia en gestión deportiva y desarrollo de proyectos
-                        estratégicos para federaciones y clubes internacionales.</p>
-                </div>
+    <!-- Casos de Éxito -->
+    <section class="section bg-light">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Casos de Éxito</h2>
+                <p class="section-subtitle">Transformación e impacto en diferentes sectores estratégicos</p>
             </div>
 
-            <div class="team-member">
-                <div class="member-image">
-                    <img src="/api/placeholder/400/400" alt="Consultora eSports">
+            <div class="grid grid-2" style="gap: var(--space-xl);">
+                <!-- Caso E-Sports -->
+                <div class="card">
+                    <div style="height: 200px; overflow: hidden; border-radius: var(--border-radius-lg) var(--border-radius-lg) 0 0;">
+                        <img src="asset/image/EVA.jpg" alt="Desarrollo E-Sports Chile" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="card-body">
+                        <h3>Desarrollo de E-Sports en Chile</h3>
+                        <p>Desarrollamos un plan estratégico integral para la implementación de proyectos de E-Sports en Chile y Sudamérica. Los E-Sports representan una de las disciplinas con mayor crecimiento mundial, tanto en participación como en audiencia, con premios monetarios muy atractivos.</p>
+                        <p class="text-muted">Nuestras consultorías están orientadas a comprender este sector, proyectar tendencias futuras, evaluar costos de implementación y definir la infraestructura necesaria para eventos exitosos.</p>
+                        <div style="margin-top: var(--space-lg);">
+                            <a href="contacto.html" class="btn btn-secondary">Más información</a>
+                        </div>
+                    </div>
                 </div>
-                <div class="member-info">
-                    <h3>Carla Mendoza</h3>
-                    <p class="member-position">Especialista en eSports y Nuevos Medios</p>
-                    <p class="member-bio">Pionera en el desarrollo de estrategias para esports en Latinoamérica, con
-                        experiencia en organización de torneos y desarrollo de comunidades digitales.</p>
-                </div>
-            </div>
 
-            <div class="team-member">
-                <div class="member-image">
-                    <img src="/api/placeholder/400/400" alt="Consultor Energético">
+                <!-- Caso Sport Pirque -->
+                <div class="card">
+                    <div style="height: 200px; overflow: hidden; border-radius: var(--border-radius-lg) var(--border-radius-lg) 0 0;">
+                        <img src="asset/image/sport-pirque.jpg" alt="Ciudad Deportiva Sport Pirque" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="card-body">
+                        <h3>Ciudad Deportiva Sport Pirque</h3>
+                        <p>Sport Pirque es un proyecto privado que busca desarrollar la primera ciudad deportiva en la zona sur de la Región Metropolitana. Grupo Atlas trabajó en la planificación e implementación integral del proyecto.</p>
+                        <p class="text-muted">Realizamos estudios exhaustivos para seleccionar las disciplinas deportivas más atractivas y viables comercialmente, considerando aspectos económicos, arquitectónicos, regulaciones municipales y eficiencia energética.</p>
+                        <div style="margin-top: var(--space-lg);">
+                            <a href="contacto.html" class="btn btn-secondary">Más información</a>
+                        </div>
+                    </div>
                 </div>
-                <div class="member-info">
-                    <h3>Rodrigo Fuentes</h3>
-                    <p class="member-position">Director de Proyectos Energéticos</p>
-                    <p class="member-bio">Especialista en energías renovables y sostenibilidad con más de 12 años de
-                        experiencia en proyectos de gran escala a nivel internacional.</p>
+
+                <!-- Caso ENEL X -->
+                <div class="card">
+                    <div style="height: 200px; overflow: hidden; border-radius: var(--border-radius-lg) var(--border-radius-lg) 0 0;">
+                        <img src="asset/image/bomba calor.jpg" alt="Eficiencia Energética ENEL X" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="card-body">
+                        <h3>Eficiencia Energética con ENEL X</h3>
+                        <p>Tras la pandemia, la piscina de la Corporación de Deportes de Ñuñoa presentó filtraciones y problemas térmicos. Brindamos asesoría especializada identificando la solución óptima para reparar la piscina y resolver los problemas de temperatura.</p>
+                        <p class="text-muted">En colaboración con ENEL X, desarrollamos un proyecto integral de eficiencia energética que generó importantes ahorros en consumo hídrico y energético del recinto.</p>
+                        <div style="margin-top: var(--space-lg);">
+                            <a href="contacto.html" class="btn btn-secondary">Más información</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Caso Lo Barnechea -->
+                <div class="card">
+                    <div style="height: 200px; overflow: hidden; border-radius: var(--border-radius-lg) var(--border-radius-lg) 0 0;">
+                        <img src="asset/image/piscina_barnechea.jpg" alt="Piscina Municipal Lo Barnechea" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="card-body">
+                        <h3>Piscina Municipal Lo Barnechea</h3>
+                        <p>Este recinto fue inaugurado en enero de 2024. Grupo Atlas participó activamente en el desarrollo e implementación para su apertura a la comunidad, trabajando en conjunto con el municipio.</p>
+                        <p class="text-muted">Nuestra gestión incluyó la definición de perfiles profesionales, determinación de servicios, análisis de costos de mantenimiento, capacitación del personal y elaboración de manuales de operación.</p>
+                        <div style="margin-top: var(--space-lg);">
+                            <a href="contacto.html" class="btn btn-secondary">Más información</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="cta">
-        <div class="cta-content">
+    <!-- Indicadores de Impacto -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Nuestro Impacto</h2>
+                <p class="section-subtitle">Resultados que demuestran nuestro compromiso con la excelencia</p>
+            </div>
+
+            <div class="grid grid-4">
+                <div class="text-center">
+                    <div class="value-icon" style="background-color: var(--consulting-accent); margin: 0 auto var(--space-md);">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <div style="font-size: var(--font-size-4xl); font-weight: var(--font-weight-bold); color: var(--consulting-accent);">50+</div>
+                    <h4>Proyectos Exitosos</h4>
+                    <p class="text-muted">Consultoría estratégica implementada</p>
+                </div>
+
+                <div class="text-center">
+                    <div class="value-icon" style="background-color: var(--success-color); margin: 0 auto var(--space-md);">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div style="font-size: var(--font-size-4xl); font-weight: var(--font-weight-bold); color: var(--success-color);">25+</div>
+                    <h4>Clientes Satisfechos</h4>
+                    <p class="text-muted">Organizaciones transformadas</p>
+                </div>
+
+                <div class="text-center">
+                    <div class="value-icon" style="background-color: var(--primary-color); margin: 0 auto var(--space-md);">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div style="font-size: var(--font-size-4xl); font-weight: var(--font-weight-bold); color: var(--primary-color);">85%</div>
+                    <h4>Tasa de Éxito</h4>
+                    <p class="text-muted">En implementación de estrategias</p>
+                </div>
+
+                <div class="text-center">
+                    <div class="value-icon" style="background-color: var(--web-accent); margin: 0 auto var(--space-md);">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div style="font-size: var(--font-size-4xl); font-weight: var(--font-weight-bold); color: var(--web-accent);">5+</div>
+                    <h4>Años de Experiencia</h4>
+                    <p class="text-muted">En consultoría especializada</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta section">
+        <div class="container">
             <h2>Transforma los desafíos en oportunidades</h2>
-            <p>Contáctanos hoy para una consulta inicial y descubre cómo podemos ayudarte a alcanzar tus objetivos
-                estratégicos.</p>
-            <a href="index.html#contact" class="btn-primary">Solicitar una consulta</a>
+            <p>Contáctanos hoy para una consulta inicial y descubre cómo podemos ayudarte a alcanzar tus objetivos estratégicos con un enfoque personalizado y resultados medibles.</p>
+            <a href="contacto.html" class="btn btn-primary btn-lg">Solicitar una consulta</a>
         </div>
-    </section> -->
+    </section>
 
-    <footer>
-        <div class="footer-content">
-            <div class="footer-logo">
-                <h2>GRUPO ATLAS</h2>
-                <p>Innovación y excelencia en múltiples industrias</p>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>GRUPO ATLAS</h3>
+                    <p>Innovación y excelencia en múltiples industrias</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Enlaces Rápidos</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="index.html#empresas">Empresas</a></li>
+                        <li><a href="consulting.html">Consulting</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Nuestras Empresas</h3>
+                    <ul class="footer-links">
+                        <li><a href="https://apsijasa.github.io/renovafit/" target="_blank">RenovaCare</a></li>
+                        <li><a href="atlas_sport.html">Atlas Sport</a></li>
+                        <li><a href="constructora.html">Constructora Atlas</a></li>
+                        <li><a href="consulting.html">Atlas Consulting</a></li>
+                        <li><a href="web_services.html">Servicios Web</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Consultoría Estratégica</h3>
+                    <p>¿Necesitas transformar tu organización?</p>
+                    <form class="newsletter-form">
+                        <input type="email" class="newsletter-input" placeholder="Tu correo electrónico" required>
+                        <button type="submit" class="newsletter-btn">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
             </div>
-            <div class="footer-links">
-                <h3>Enlaces rápidos</h3>
-                <ul>
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="index.html#empresas">Empresas</a></li>
-                    <li><a href="index.html#portfolio">Portafolio</a></li>
-                    <li><a href="index.html#about">Nosotros</a></li>
-                    <li><a href="index.html#contact">Contacto</a></li>
-                </ul>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 Grupo Atlas. Todos los derechos reservados.</p>
             </div>
-            <div class="footer-companies">
-                <h3>Nuestras empresas</h3>
-                <ul>
-                    <li><a href="#">RenovaCare</a></li>
-                    <li><a href="data_sport.html">Atlas Sport</a></li>
-                    <li><a href="constructora.html">Constructora Atlas</a></li>
-                    <li><a href="consulting.html">Atlas Consulting</a></li>
-                    <li><a href="web_services.html">Servicios Web</a></li>
-                </ul>
-            </div>
-            <div class="footer-newsletter">
-                <h3>Boletín informativo</h3>
-                <p>Suscríbete para recibir noticias y actualizaciones</p>
-                <form>
-                    <input type="email" placeholder="Tu email">
-                    <button type="submit"><i class="fas fa-paper-plane"></i></button>
-                </form>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2025 Grupo Atlas. Todos los derechos reservados.</p>
         </div>
     </footer>
 
-    <script>
-        // Menú móvil toggle
-        document.querySelector('.menu-toggle').addEventListener('click', function () {
-            document.querySelector('.nav-menu').classList.toggle('active');
-        });
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
 
-        // Navegación smooth scroll
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                const href = this.getAttribute('href');
-                if (href.startsWith('#') && document.querySelector(href)) {
-                    e.preventDefault();
-                    document.querySelector(href).scrollIntoView({
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
-
-        // Manejo del menú desplegable en móvil
-        document.querySelectorAll('.dropdown-toggle').forEach(toggle => {
-            toggle.addEventListener('click', function (e) {
-                if (window.innerWidth <= 768) {
-                    e.preventDefault();
-                    this.parentElement.classList.toggle('active');
-                }
-            });
-        });
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "Atlas Consulting",
+        "description": "Consultoría estratégica especializada en deportes, esports, proyectos energéticos y sectores de alto impacto",
+        "provider": {
+            "@type": "Organization",
+            "name": "Grupo Atlas"
+        },
+        "serviceType": "Consultoría estratégica, Asesoría en eSports, Consultoría deportiva, Proyectos energéticos",
+        "areaServed": "Chile y Sudamérica"
+    }
     </script>
-    <script src="js/whatsapp-button.js"></script>
-    <!-- Añadir al final del body, justo antes de cerrar </body> -->
-    <script src="js/waves.js"></script>
-    <script src="js/waves-hero-implementation.js"></script>
 </body>
-
 </html>

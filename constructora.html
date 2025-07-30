@@ -1,364 +1,437 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Constructora Atlas - Proyectos de Infraestructura</title>
+    <meta name="description" content="Constructora Atlas - Especialistas en infraestructura deportiva, proyectos energéticos y construcción sustentable con los más altos estándares de calidad.">
+    <meta name="keywords" content="constructora atlas, construcción deportiva, infraestructura, proyectos energéticos, construcción sustentable, piscinas">
+    <meta name="author" content="Grupo Atlas">
+    
+    <title>Constructora Atlas - Infraestructura y Construcción Sustentable | Grupo Atlas</title>
+    
+    <!-- Favicon -->
     <link rel="icon" href="asset/image/favicon-16x16.png" type="image/x-icon">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/constructora.css">
-    <link rel="stylesheet" href="css/heroes.css">
-    <link rel="stylesheet" href="css/whatsapp-button.css">
-    <link rel="stylesheet" href="css/waves.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Aptos:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Constructora Atlas - Infraestructura y Construcción">
+    <meta property="og:description" content="Expertos en infraestructura deportiva y proyectos energéticos sustentables.">
+    <meta property="og:image" content="https://grupoatlas.cl/asset/image/hero-constructora.jpg">
+    <meta property="og:url" content="https://grupoatlas.cl/constructora.html">
 </head>
 
 <body>
-    <header>
-        <nav>
-            <div class="logo">
-                <svg width="30" height="30" viewBox="0 0 250 250" xmlns="http://www.w3.org/2000/svg" class="logo-svg">
-                    <path d="M125 10 L10 240 L240 240 Z" fill="#0c2340" />
-                    <path d="M125 70 L55 200 L195 200 Z" fill="#2c6674" />
-                </svg>
-                <h1>GRUPO ATLAS</h1>
-            </div>
-            <div class="menu-toggle">
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-mountain logo-icon"></i>
+                GRUPO ATLAS
+            </a>
+            
+            <button class="nav-toggle" aria-label="Toggle navigation">
                 <i class="fas fa-bars"></i>
-            </div>
+            </button>
+            
             <ul class="nav-menu">
-                <li><a href="index.html" class="active">Inicio</a></li>
+                <li><a href="index.html" class="nav-link">Inicio</a></li>
                 <li class="dropdown">
-                    <a href="#empresas" class="dropdown-toggle">Servicios</a>
+                    <a href="#" class="nav-link dropdown-toggle">Servicios</a>
                     <div class="dropdown-content">
-                        <a href="#">RenovaCare</a>
-                        <a href="atlas_sport.html">Atlas Sport</a>
-                        <a href="constructora.html">Constructora Atlas</a>
-                        <a href="consulting.html">Atlas Consulting</a>
-                        <a href="web_services.html">Servicios Web</a>
+                        <a href="constructora.html" class="dropdown-item">Constructora Atlas</a>
+                        <a href="consulting.html" class="dropdown-item">Atlas Consulting</a>
+                        <a href="web_services.html" class="dropdown-item">Servicios Web</a>
                     </div>
                 </li>
-                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="constructora.html" class="nav-link active">Constructora</a></li>
+                <li><a href="contacto.html" class="nav-link">Contacto</a></li>
             </ul>
         </nav>
     </header>
 
-    <section class="hero hero-constructora">
-        <div class="hero-content">
-            <h1>Constructora Atlas</h1>
-            <p>Expertos en Infraestructura y diseño deportivo</p>
-        </div>
-    </section>
-
-    <section class="company-details">
-        <div class="section-header">
-            <h2>Soluciones de Construcción</h2>
-            <p>Compromiso con la calidad y la sostenibilidad</p>
-        </div>
-
-        <div class="company-description">
-            <div class="description-content">
-                <div class="description-image">
-                    <img src="/asset/image/Centro-acuatico.jpg" alt="Constructora Atlas Proyectos">
-                </div>
-                <div class="description-text">
-                    <h3>Nuestra especialidad</h3>
-                    <p>En Constructora Atlas nos dedicamos a la construcción, recuperación e instalación de
-                        infraestructuras deportivas, proyectos energéticos y obras de construcción a diferentes escalas.
-                        Contamos con un equipo de profesionales altamente calificados y la tecnología necesaria para
-                        garantizar resultados excepcionales.</p>
-                    <p>Nuestro compromiso con la calidad, la sostenibilidad y la innovación nos permite ofrecer
-                        soluciones constructivas que satisfacen las necesidades y expectativas de nuestros clientes,
-                        respetando siempre el medio ambiente y las comunidades donde operamos.</p>
-                    <a href="index.html#contact" class="btn-primary">Solicitar cotización</a>
-                </div>
+    <!-- Hero Section -->
+    <section class="hero" style="background: linear-gradient(135deg, var(--construction-accent), var(--success-color));">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Constructora Atlas</h1>
+                <p>Expertos en infraestructura deportiva y proyectos energéticos sustentables con compromiso hacia la excelencia</p>
+                <a href="#servicios" class="btn btn-primary btn-lg">Explorar servicios</a>
             </div>
         </div>
     </section>
 
-    <section class="services">
+    <!-- Descripción de la empresa -->
+    <section class="section">
         <div class="container">
             <div class="section-header">
-                <h2>Nuestros Servicios</h2>
-                <p>Soluciones integrales para proyectos de construcción</p>
+                <h2 class="section-title">Soluciones de Construcción</h2>
+                <p class="section-subtitle">Compromiso con la calidad y la sostenibilidad</p>
             </div>
 
-            <div class="services-grid">
-                <div class="service-card">
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="asset/image/Centro-acuatico.jpg" alt="Centro Acuático - Proyecto Constructora Atlas" style="border-radius: var(--border-radius-lg); box-shadow: var(--box-shadow);">
+                </div>
+                <div class="about-text">
+                    <h3>Nuestra especialidad</h3>
+                    <p>En Constructora Atlas nos dedicamos a la construcción, recuperación e instalación de infraestructuras deportivas, proyectos energéticos y obras de construcción a diferentes escalas. Contamos con un equipo de profesionales altamente calificados y la tecnología necesaria para garantizar resultados excepcionales.</p>
+                    
+                    <p>Nuestro compromiso con la calidad, la sostenibilidad y la innovación nos permite ofrecer soluciones constructivas que satisfacen las necesidades y expectativas de nuestros clientes, respetando siempre el medio ambiente y las comunidades donde operamos.</p>
+                    
+                    <div style="margin-top: var(--space-lg);">
+                        <a href="contacto.html" class="btn btn-primary">Solicitar cotización</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Servicios -->
+    <section id="servicios" class="section bg-light">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Nuestros Servicios</h2>
+                <p class="section-subtitle">Soluciones integrales para proyectos de construcción</p>
+            </div>
+
+            <div class="grid grid-auto">
+                <div class="service-card service-construction">
                     <div class="service-icon">
                         <i class="fas fa-running"></i>
                     </div>
                     <h3>Infraestructura Deportiva</h3>
-                    <p>Diseño, construcción y renovación de estadios, piscinas olímpicas, pistas de atletismo, canchas
-                        multideportivas y todo tipo de instalaciones deportivas con los más altos estándares de calidad.
-                    </p>
+                    <p>Diseño, construcción y renovación de estadios, piscinas olímpicas, pistas de atletismo, canchas multideportivas y todo tipo de instalaciones deportivas con los más altos estándares de calidad y normativas internacionales.</p>
                 </div>
 
-                <div class="service-card">
+                <div class="service-card service-construction">
                     <div class="service-icon">
                         <i class="fas fa-solar-panel"></i>
                     </div>
                     <h3>Proyectos Energéticos</h3>
-                    <p>Desarrollo e implementación de proyectos energéticos sostenibles, incluyendo instalaciones
-                        solares,
-                        eólicas y otras soluciones de energía renovable para diversos tipos de infraestructuras.</p>
+                    <p>Desarrollo e implementación de proyectos energéticos sostenibles, incluyendo instalaciones solares, eólicas y otras soluciones de energía renovable para diversos tipos de infraestructuras.</p>
                 </div>
 
-                <div class="service-card">
+                <div class="service-card service-construction">
                     <div class="service-icon">
                         <i class="fas fa-building"></i>
                     </div>
                     <h3>Edificación Comercial</h3>
-                    <p>Construcción de oficinas, centros comerciales, hoteles y otras instalaciones comerciales que
-                        combinan
-                        funcionalidad, estética y eficiencia energética.</p>
+                    <p>Construcción de oficinas, centros comerciales, hoteles y otras instalaciones comerciales que combinan funcionalidad, estética y eficiencia energética con diseño arquitectónico moderno.</p>
                 </div>
 
-                <div class="service-card">
+                <div class="service-card service-construction">
                     <div class="service-icon">
                         <i class="fas fa-home"></i>
                     </div>
                     <h3>Proyectos Residenciales</h3>
-                    <p>Desarrollo de proyectos habitacionales, desde viviendas unifamiliares hasta complejos
-                        residenciales,
-                        con enfoque en calidad de vida y sostenibilidad.</p>
+                    <p>Desarrollo de proyectos habitacionales, desde viviendas unifamiliares hasta complejos residenciales, con enfoque en calidad de vida, sostenibilidad y diseño contemporáneo.</p>
                 </div>
 
-                <div class="service-card">
+                <div class="service-card service-construction">
                     <div class="service-icon">
                         <i class="fas fa-wrench"></i>
                     </div>
                     <h3>Mantenimiento y Recuperación</h3>
-                    <p>Servicios especializados de mantenimiento, restauración y recuperación de infraestructuras
-                        existentes
-                        para prolongar su vida útil y mejorar su funcionalidad.</p>
+                    <p>Servicios especializados de mantenimiento, restauración y recuperación de infraestructuras existentes para prolongar su vida útil y mejorar su funcionalidad y eficiencia.</p>
                 </div>
 
-                <div class="service-card">
+                <div class="service-card service-construction">
                     <div class="service-icon">
                         <i class="fas fa-drafting-compass"></i>
                     </div>
                     <h3>Diseño y Consultoría</h3>
-                    <p>Servicios de diseño arquitectónico, ingeniería y consultoría para proyectos de construcción,
-                        asegurando soluciones óptimas y personalizadas.</p>
+                    <p>Servicios de diseño arquitectónico, ingeniería y consultoría para proyectos de construcción, asegurando soluciones óptimas, personalizadas y sostenibles.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="project-approach">
-        <div class="section-header">
-            <h2>Nuestro Enfoque</h2>
-            <p>Metodología que garantiza la excelencia en cada proyecto</p>
-        </div>
+    <!-- Nuestro Enfoque -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Nuestro Enfoque</h2>
+                <p class="section-subtitle">Metodología que garantiza la excelencia en cada proyecto</p>
+            </div>
 
-        <div class="approach-steps">
-            <div class="step">
-                <div class="step-number">01</div>
-                <div class="step-content">
-                    <h3>Planificación</h3>
-                    <p>Análisis detallado de requerimientos, estudios de viabilidad, diseño preliminar y elaboración de
-                        presupuestos precisos.</p>
-                </div>
-            </div>
-            <div class="step">
-                <div class="step-number">02</div>
-                <div class="step-content">
-                    <h3>Diseño</h3>
-                    <p>Desarrollo de diseños arquitectónicos e ingenieriles que combinan funcionalidad, estética y
-                        eficiencia energética.</p>
-                </div>
-            </div>
-            <div class="step">
-                <div class="step-number">03</div>
-                <div class="step-content">
-                    <h3>Ejecución</h3>
-                    <p>Implementación del proyecto con equipos especializados, tecnología avanzada y estricto control de
-                        calidad en cada fase.</p>
-                </div>
-            </div>
-            <div class="step">
-                <div class="step-number">04</div>
-                <div class="step-content">
-                    <h3>Control</h3>
-                    <p>Supervisión constante para garantizar el cumplimiento de plazos, presupuestos y estándares de
-                        calidad establecidos.</p>
-                </div>
-            </div>
-            <div class="step">
-                <div class="step-number">05</div>
-                <div class="step-content">
-                    <h3>Entrega</h3>
-                    <p>Finalización y entrega del proyecto con todas las certificaciones necesarias y garantías de
-                        calidad.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="projects">
-        <div class="section-header">
-            <h2>Proyectos Destacados</h2>
-            <p>Muestra de nuestra experiencia y capacidad</p>
-        </div>
-
-        <div class="projects-grid">
-            <div class="project-card">
-                <div class="project-image">
-                    <img src="asset/image/cemento-piscina.jpg" alt="Estadio Multideportivo">
-                </div>
-                <div class="project-info">
-                    <h3>Piscina Municipal Ñuñoa</h3>
-                    <p>Construcción de un complejo deportivo con capacidad para 960 usuarios/hora, también se trabajó la
-                        eficiencia energética del recinto</p>
-                    <div class="project-details">
-                        <div class="detail">
-                            <span>Cliente:</span> Corporación Municipal de deportes Ñuñoa
+            <div class="grid grid-auto-sm">
+                <div class="card hover-lift">
+                    <div class="card-body text-center">
+                        <div class="value-icon" style="background-color: var(--construction-accent); margin-bottom: var(--space-lg);">
+                            <span style="font-size: var(--font-size-2xl); font-weight: var(--font-weight-bold);">01</span>
                         </div>
-                        <div class="detail">
-                            <span>Duración:</span> 4 meses
-                        </div>
-                        <div class="detail">
-                            <span>Año:</span> 2022
-                        </div>
+                        <h3>Planificación</h3>
+                        <p>Análisis detallado de requerimientos, estudios de viabilidad, diseño preliminar y elaboración de presupuestos precisos con cronogramas realistas.</p>
                     </div>
                 </div>
-            </div>
 
-            <div class="project-card">
-                <div class="project-image">
-                    <img src="asset/image/escalada.jpg" alt="Complejo Acuático">
-                </div>
-                <div class="project-info">
-                    <h3>Centro escalada</h3>
-                    <p>Diseño y construcción de instalaciones para un centro de escalada con fines deportivos y
-                        recreacionales.</p>
-                    <div class="project-details">
-                        <div class="detail">
-                            <span>Cliente:</span> Atlas Sport Center
+                <div class="card hover-lift">
+                    <div class="card-body text-center">
+                        <div class="value-icon" style="background-color: var(--construction-accent); margin-bottom: var(--space-lg);">
+                            <span style="font-size: var(--font-size-2xl); font-weight: var(--font-weight-bold);">02</span>
                         </div>
-                        <div class="detail">
-                            <span>Duración:</span> 14 meses
-                        </div>
-                        <div class="detail">
-                            <span>Año:</span> 2023
-                        </div>
+                        <h3>Diseño</h3>
+                        <p>Desarrollo de diseños arquitectónicos e ingenieriles que combinan funcionalidad, estética y eficiencia energética con las últimas tendencias.</p>
                     </div>
                 </div>
-            </div>
 
-            <div class="project-card">
-                <div class="project-image">
-                    <img src="asset/image/piscina LPD.jpg" alt="Parque Fotovoltaico">
+                <div class="card hover-lift">
+                    <div class="card-body text-center">
+                        <div class="value-icon" style="background-color: var(--construction-accent); margin-bottom: var(--space-lg);">
+                            <span style="font-size: var(--font-size-2xl); font-weight: var(--font-weight-bold);">03</span>
+                        </div>
+                        <h3>Ejecución</h3>
+                        <p>Implementación del proyecto con equipos especializados, tecnología avanzada y estricto control de calidad en cada fase de construcción.</p>
+                    </div>
                 </div>
-                <div class="project-info">
-                    <h3>Recuperación Piscina Municipal Lo Prado</h3>
-                    <p>Recuperación de una piscina abandonada, la cual recuperamos para que abriera a la comunidad,
-                        ademas de implementar el primero sistema temperado de una piscina del sector norponiente de
-                        Santiago.</p>
-                    <div class="project-details">
-                        <div class="detail">
-                            <span>Cliente:</span> Municipalidad Lo Prado
+
+                <div class="card hover-lift">
+                    <div class="card-body text-center">
+                        <div class="value-icon" style="background-color: var(--construction-accent); margin-bottom: var(--space-lg);">
+                            <span style="font-size: var(--font-size-2xl); font-weight: var(--font-weight-bold);">04</span>
                         </div>
-                        <div class="detail">
-                            <span>Duración:</span> 2 años
+                        <h3>Control</h3>
+                        <p>Supervisión constante para garantizar el cumplimiento de plazos, presupuestos y estándares de calidad establecidos desde el inicio.</p>
+                    </div>
+                </div>
+
+                <div class="card hover-lift">
+                    <div class="card-body text-center">
+                        <div class="value-icon" style="background-color: var(--construction-accent); margin-bottom: var(--space-lg);">
+                            <span style="font-size: var(--font-size-2xl); font-weight: var(--font-weight-bold);">05</span>
                         </div>
-                        <div class="detail">
-                            <span>Año:</span> 2019
-                        </div>
+                        <h3>Entrega</h3>
+                        <p>Finalización y entrega del proyecto con todas las certificaciones necesarias, garantías de calidad y soporte post-entrega.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="cta">
-        <div class="cta-content">
+    <!-- Proyectos Destacados -->
+    <section class="section bg-light">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Proyectos Destacados</h2>
+                <p class="section-subtitle">Muestra de nuestra experiencia y capacidad constructiva</p>
+            </div>
+
+            <div class="grid grid-auto-lg">
+                <div class="card">
+                    <div style="height: 250px; overflow: hidden; border-radius: var(--border-radius-lg) var(--border-radius-lg) 0 0;">
+                        <img src="asset/image/cemento-piscina.jpg" alt="Piscina Municipal Ñuñoa" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="card-body">
+                        <h3>Piscina Municipal Ñuñoa</h3>
+                        <p>Construcción de un complejo deportivo con capacidad para 960 usuarios/hora. Implementamos sistemas de eficiencia energética que redujeron el consumo en un 40%.</p>
+                        <div style="margin-top: var(--space-md);">
+                            <div class="grid grid-3" style="gap: var(--space-sm); margin-bottom: var(--space-md);">
+                                <div>
+                                    <strong>Cliente:</strong><br>
+                                    <small class="text-muted">Corp. Municipal Deportes Ñuñoa</small>
+                                </div>
+                                <div>
+                                    <strong>Duración:</strong><br>
+                                    <small class="text-muted">4 meses</small>
+                                </div>
+                                <div>
+                                    <strong>Año:</strong><br>
+                                    <small class="text-muted">2022</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div style="height: 250px; overflow: hidden; border-radius: var(--border-radius-lg) var(--border-radius-lg) 0 0;">
+                        <img src="asset/image/escalada.jpg" alt="Centro de Escalada" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="card-body">
+                        <h3>Centro de Escalada</h3>
+                        <p>Diseño y construcción de instalaciones especializadas para centro de escalada con fines deportivos y recreacionales, incluyendo muros de diferentes dificultades.</p>
+                        <div style="margin-top: var(--space-md);">
+                            <div class="grid grid-3" style="gap: var(--space-sm); margin-bottom: var(--space-md);">
+                                <div>
+                                    <strong>Cliente:</strong><br>
+                                    <small class="text-muted">Atlas Sport Center</small>
+                                </div>
+                                <div>
+                                    <strong>Duración:</strong><br>
+                                    <small class="text-muted">14 meses</small>
+                                </div>
+                                <div>
+                                    <strong>Año:</strong><br>
+                                    <small class="text-muted">2023</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div style="height: 250px; overflow: hidden; border-radius: var(--border-radius-lg) var(--border-radius-lg) 0 0;">
+                        <img src="asset/image/piscina LPD.jpg" alt="Recuperación Piscina Lo Prado" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="card-body">
+                        <h3>Recuperación Piscina Lo Prado</h3>
+                        <p>Recuperación integral de una piscina abandonada, implementando el primer sistema de climatización del sector norponiente de Santiago.</p>
+                        <div style="margin-top: var(--space-md);">
+                            <div class="grid grid-3" style="gap: var(--space-sm); margin-bottom: var(--space-md);">
+                                <div>
+                                    <strong>Cliente:</strong><br>
+                                    <small class="text-muted">Municipalidad Lo Prado</small>
+                                </div>
+                                <div>
+                                    <strong>Duración:</strong><br>
+                                    <small class="text-muted">2 años</small>
+                                </div>
+                                <div>
+                                    <strong>Año:</strong><br>
+                                    <small class="text-muted">2019</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certificaciones y Calidad -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Calidad y Certificaciones</h2>
+                <p class="section-subtitle">Comprometidos con los más altos estándares de la industria</p>
+            </div>
+
+            <div class="grid grid-auto-sm">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <div class="service-icon" style="background-color: var(--success-color); color: white; margin-bottom: var(--space-md);">
+                            <i class="fas fa-certificate"></i>
+                        </div>
+                        <h4>ISO 9001</h4>
+                        <p>Gestión de calidad certificada para todos nuestros procesos constructivos</p>
+                    </div>
+                </div>
+
+                <div class="card text-center">
+                    <div class="card-body">
+                        <div class="service-icon" style="background-color: var(--construction-accent); color: white; margin-bottom: var(--space-md);">
+                            <i class="fas fa-leaf"></i>
+                        </div>
+                        <h4>Construcción Sustentable</h4>
+                        <p>Prácticas eco-amigables y uso de materiales sostenibles en todos nuestros proyectos</p>
+                    </div>
+                </div>
+
+                <div class="card text-center">
+                    <div class="card-body">
+                        <div class="service-icon" style="background-color: var(--primary-color); color: white; margin-bottom: var(--space-md);">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h4>Seguridad Laboral</h4>
+                        <p>Cumplimiento estricto de normas de seguridad y prevención de riesgos</p>
+                    </div>
+                </div>
+
+                <div class="card text-center">
+                    <div class="card-body">
+                        <div class="service-icon" style="background-color: var(--warning-color); color: white; margin-bottom: var(--space-md);">
+                            <i class="fas fa-tools"></i>
+                        </div>
+                        <h4>Garantía Extendida</h4>
+                        <p>Garantías amplias y servicio post-venta para todos nuestros proyectos</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta section">
+        <div class="container">
             <h2>¿Tienes un proyecto en mente?</h2>
-            <p>Contáctanos hoy mismo para conversar sobre cómo podemos ayudarte a materializarlo con los más altos
-                estándares de calidad.</p>
-            <a href="contacto.html" class="btn-primary">Solicitar presupuesto</a>
+            <p>Contáctanos hoy mismo para conversar sobre cómo podemos ayudarte a materializarlo con los más altos estándares de calidad y sostenibilidad.</p>
+            <a href="contacto.html" class="btn btn-primary btn-lg">Solicitar presupuesto</a>
         </div>
     </section>
 
-    <footer>
-        <div class="footer-content">
-            <div class="footer-logo">
-                <h2>GRUPO ATLAS</h2>
-                <p>Innovación y excelencia en múltiples industrias</p>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>GRUPO ATLAS</h3>
+                    <p>Innovación y excelencia en múltiples industrias</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Enlaces Rápidos</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="index.html#empresas">Empresas</a></li>
+                        <li><a href="constructora.html">Constructora</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Nuestras Empresas</h3>
+                    <ul class="footer-links">
+                        <li><a href="https://apsijasa.github.io/renovafit/" target="_blank">RenovaCare</a></li>
+                        <li><a href="atlas_sport.html">Atlas Sport</a></li>
+                        <li><a href="constructora.html">Constructora Atlas</a></li>
+                        <li><a href="consulting.html">Atlas Consulting</a></li>
+                        <li><a href="web_services.html">Servicios Web</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Servicios de Construcción</h3>
+                    <p>¿Necesitas una cotización para tu proyecto?</p>
+                    <form class="newsletter-form">
+                        <input type="email" class="newsletter-input" placeholder="Tu correo electrónico" required>
+                        <button type="submit" class="newsletter-btn">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
             </div>
-            <div class="footer-links">
-                <h3>Enlaces rápidos</h3>
-                <ul>
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="index.html#empresas">Empresas</a></li>
-                    <li><a href="index.html#portfolio">Portafolio</a></li>
-                    <li><a href="index.html#about">Nosotros</a></li>
-                    <li><a href="index.html#contact">Contacto</a></li>
-                </ul>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 Grupo Atlas. Todos los derechos reservados.</p>
             </div>
-            <div class="footer-companies">
-                <h3>Nuestras empresas</h3>
-                <ul>
-                    <li><a href="#">RenovaCare</a></li>
-                    <li><a href="data_sport.html">Atlas Sport</a></li>
-                    <li><a href="constructora.html">Constructora Atlas</a></li>
-                    <li><a href="consulting.html">Atlas Consulting</a></li>
-                    <li><a href="web_services.html">Servicios Web</a></li>
-                </ul>
-            </div>
-            <div class="footer-newsletter">
-                <h3>Boletín informativo</h3>
-                <p>Suscríbete para recibir noticias y actualizaciones</p>
-                <form>
-                    <input type="email" placeholder="Tu email">
-                    <button type="submit"><i class="fas fa-paper-plane"></i></button>
-                </form>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2025 Grupo Atlas. Todos los derechos reservados.</p>
         </div>
     </footer>
 
-    <script>
-        // Menú móvil toggle
-        document.querySelector('.menu-toggle').addEventListener('click', function () {
-            document.querySelector('.nav-menu').classList.toggle('active');
-        });
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
 
-        // Navegación smooth scroll
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                const href = this.getAttribute('href');
-                if (href.startsWith('#') && document.querySelector(href)) {
-                    e.preventDefault();
-                    document.querySelector(href).scrollIntoView({
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
-
-        // Manejo del menú desplegable en móvil
-        document.querySelectorAll('.dropdown-toggle').forEach(toggle => {
-            toggle.addEventListener('click', function (e) {
-                if (window.innerWidth <= 768) {
-                    e.preventDefault();
-                    this.parentElement.classList.toggle('active');
-                }
-            });
-        });
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ConstructionBusiness",
+        "name": "Constructora Atlas",
+        "description": "Especialistas en infraestructura deportiva, proyectos energéticos y construcción sustentable",
+        "provider": {
+            "@type": "Organization",
+            "name": "Grupo Atlas"
+        },
+        "serviceType": "Construcción, Infraestructura deportiva, Proyectos energéticos, Recuperación de instalaciones",
+        "areaServed": "Chile"
+    }
     </script>
-    <script src="js/whatsapp-button.js"></script>
-    <!-- Añadir al final del body, justo antes de cerrar </body> -->
-    <script src="js/waves.js"></script>
-    <script src="js/waves-hero-implementation.js"></script>
 </body>
-
 </html>
